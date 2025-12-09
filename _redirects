@@ -1,0 +1,9 @@
+# Netlify redirects file
+
+# Redirect vecchi URL ai nuovi
+/privacy-policy-ordinlampo.html /privacy-policy.html 301
+/cookie-policy-ordinlampo.html /cookie-policy.html 301
+/termini-servizio-ordinlampo.html /termini-servizio.html 301
+
+# Redirect www a non-www
+https://www.ordini-lampo.it/* https://ordini-lampo.it/:splat 301!

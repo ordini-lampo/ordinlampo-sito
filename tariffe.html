@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariffe | Ordini-Lampo</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Tariffe Ordini-Lampo: da €0,78 a €1,20 per ordine. Scegli il piano giusto per il tuo volume.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gradient-start: #1a1a2e;
+            --gradient-mid: #4a1942;
+            --gradient-end: #8b2f5f;
+            --accent-green: #22c55e;
+            --accent-green-light: #4ade80;
+            --accent-gold: #F59E0B;
+            --text-white: #ffffff;
+            --text-muted: #a1a1aa;
+            --card-bg: rgba(255,255,255,0.05);
+            --border-glow: rgba(34, 197, 94, 0.5);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            color: var(--text-white);
+            line-height: 1.8;
+            font-size: 18px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .logo-bolt {
+            color: #F59E0B;
+            filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.4));
+        }
+        .logo-name {
+            background: linear-gradient(90deg, #F59E0B, #FBBF24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green-light);
+            margin-bottom: 10px;
+        }
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .pricing-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .pricing-card.featured {
+            border-color: var(--accent-gold);
+            background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(251,191,36,0.05));
+        }
+        .pricing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+        }
+        .pricing-name .icon {
+            margin-right: 10px;
+        }
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-green-light);
+        }
+        .pricing-price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .pricing-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .pricing-details {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-top: 15px;
+        }
+        .pricing-details p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 5px 0;
+        }
+        .pricing-details strong {
+            color: var(--text-white);
+        }
+        .pricing-tag {
+            display: inline-block;
+            background: rgba(34,197,94,0.2);
+            color: var(--accent-green-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+        .pricing-card.featured .pricing-tag {
+            background: rgba(245,158,11,0.2);
+            color: var(--accent-gold);
+        }
+        .corporate-box {
+            background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(74,222,128,0.05));
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .corporate-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-green-light);
+        }
+        .corporate-box p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-green-light));
+            color: var(--gradient-start);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(34, 197, 94, 0.6);
+        }
+        .comparison-section {
+            margin-top: 60px;
+        }
+        .comparison-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green-light);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .comparison-table th {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .comparison-table td {
+            padding: 15px 10px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .comparison-table .highlight {
+            color: var(--accent-green-light);
+            font-weight: 700;
+        }
+        .faq-section {
+            margin-top: 60px;
+        }
+        .faq-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green-light);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-white);
+        }
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: var(--accent-green-light);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .logo-text { font-size: 2rem; }
+            .page-title { font-size: 1.5rem; }
+            .pricing-header { flex-direction: column; align-items: flex-start; }
+            .pricing-price { margin-top: 10px; }
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table th, .comparison-table td { padding: 10px 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-text">
+            <span class="logo-bolt">⚡</span>
+            <span class="logo-name">Ordini–Lampo</span>
+        </div>
+        <h1 class="page-title">💰 Tariffe</h1>
+        <p class="page-subtitle">Scegli il piano giusto per il tuo volume. Più ordini fai, meno paghi.</p>
+    </div>
+
+    <!-- FREEDOM -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <div class="pricing-name">Metodo Freedom</div>
+            <div class="pricing-price">€1,20<small>/ordine</small></div>
+        </div>
+        <p class="pricing-desc">
+            <strong>Per chi inizia o fa fino a 150 ordini/mese.</strong><br>
+            Zero vincoli: lavori tutta la settimana, paghi venerdì solo quello che usi.
+        </p>
+        <div class="pricing-details">
+            <p>✓ Nessun abbonamento</p>
+            <p>✓ Nessun minimo</p>
+            <p>✓ Esci quando vuoi (7 giorni preavviso)</p>
+            <p>✓ 10 ordini omaggio per iniziare</p>
+        </div>
+        <div class="pricing-tag">Ideale per iniziare</div>
+    </div>
+
+    <!-- LAMPO 500 -->
+    <div class="pricing-card featured">
+        <div class="pricing-header">
+            <div class="pricing-name"><span class="icon">⚡</span>Lampo 500</div>
+            <div class="pricing-price">€0,98<small>/ordine</small></div>
+        </div>
+        <p class="pricing-desc">
+            <strong>Per chi fa 150-500 ordini/mese.</strong><br>
+            Prepaghi 500 ordini a €490, li usi quando vuoi. Non scadono mai.
+        </p>
+        <div class="pricing-details">
+            <p>✓ <strong>Risparmio 18%</strong> vs Freedom</p>
+            <p>✓ Crediti senza scadenza</p>
+            <p>✓ Ricarica quando vuoi</p>
+            <p>✓ Ideale anche per 2 sedi con volumi medi</p>
+        </div>
+        <div class="pricing-tag">⭐ Più richiesto</div>
+    </div>
+
+    <!-- LAMPO MAX -->
+    <div class="pricing-card">
+        <div class="pricing-header">
+            <div class="pricing-name"><span class="icon">⚡⚡⚡</span>Lampo Max</div>
+            <div class="pricing-price">€0,78<small>/ordine</small></div>
+        </div>
+        <p class="pricing-desc">
+            <strong>Per chi fa oltre 500 ordini/mese o ha più sedi (2-9).</strong><br>
+            €99/mese per sede + €0,78 per ogni ordine.
+        </p>
+        <div class="pricing-details">
+            <p>✓ <strong>Risparmio 35%</strong> vs Freedom</p>
+            <p>✓ Perfetto per locali ad alto traffico</p>
+            <p>✓ Ideale per 2-9 sedi (€99/mese per sede)</p>
+            <p>✓ Supporto prioritario (risposta entro 4h)</p>
+            <p>✓ Prezzo bloccato, nessun aumento</p>
+            <p>⚠️ Impegno iniziale 12 mesi</p>
+        </div>
+        <div class="pricing-tag">Alto volume</div>
+        
+        <div style="margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 12px; font-size: 0.9rem;">
+            <p style="margin-bottom: 10px;"><strong>📋 Condizioni LAMPO MAX:</strong></p>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">• Durata iniziale: 12 mesi</p>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">• Dopo 12 mesi: continui mese per mese, libero di uscire con 30gg preavviso</p>
+            <p style="color: var(--text-muted); margin-bottom: 15px;">• Recesso anticipato: contributo €50/mese restante (max €300)</p>
+            <p style="color: var(--accent-gold); font-size: 0.85rem;">
+                💡 <strong>Non sei sicuro del volume o preferisci non vincolarti?</strong><br>
+                Nessun problema! Parti con FREEDOM o LAMPO 500. Potrai sempre fare upgrade quando vorrai.
+            </p>
+        </div>
+    </div>
+
+    <!-- CORPORATE BOX -->
+    <div class="corporate-box">
+        <h3>🏢 Hai 10 o più sedi?</h3>
+        <p>
+            Offriamo condizioni dedicate per grandi catene.<br>
+            Contattaci per un preventivo personalizzato.
+        </p>
+        <a href="https://wa.me/393896382394?text=Ciao!%20Ho%20una%20catena%20con%2010%2B%20sedi%20e%20vorrei%20info%20sulle%20tariffe%20corporate." class="cta-button">💬 Contattaci su WhatsApp</a>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="comparison-section">
+        <h2 class="comparison-title">📊 Confronto Rapido</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Freedom</th>
+                    <th>Lampo 500</th>
+                    <th>Lampo Max</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>100 ordini/mese</strong></td>
+                    <td class="highlight">€120</td>
+                    <td>€98*</td>
+                    <td>€177</td>
+                </tr>
+                <tr>
+                    <td><strong>250 ordini/mese</strong></td>
+                    <td>€300</td>
+                    <td class="highlight">€245*</td>
+                    <td>€294</td>
+                </tr>
+                <tr>
+                    <td><strong>500 ordini/mese</strong></td>
+                    <td>€600</td>
+                    <td>€490*</td>
+                    <td class="highlight">€489</td>
+                </tr>
+                <tr>
+                    <td><strong>750 ordini/mese</strong><br><small>(es. 3 sedi)</small></td>
+                    <td>€900</td>
+                    <td>€735*</td>
+                    <td class="highlight">€882**</td>
+                </tr>
+                <tr>
+                    <td><strong>1000 ordini/mese</strong></td>
+                    <td>€1.200</td>
+                    <td>€980*</td>
+                    <td class="highlight">€879</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 15px;">
+            * Lampo 500: calcolato su prepagato €490 per 500 ordini<br>
+            ** Lampo Max multi-sede: €99/mese per ogni sede + €0,78/ordine
+        </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h2 class="faq-title">❓ Domande Frequenti</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Posso cambiare piano?</div>
+            <div class="faq-answer">Sì, puoi fare upgrade in qualsiasi momento. I crediti Freedom non usati vengono convertiti. Per il downgrade da Max, aspetta la fine dei 12 mesi.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">I crediti Lampo 500 scadono?</div>
+            <div class="faq-answer">No, i crediti prepagati non scadono mai. Li usi con calma, anche in 2-3 mesi.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Ho 2 sedi, quale piano scelgo?</div>
+            <div class="faq-answer">Dipende dal volume totale. Se insieme fate 300+ ordini/mese → Lampo 500. Se fate 500+ → Lampo Max è più conveniente.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Cosa succede se non raggiungo il minimo con Max?</div>
+            <div class="faq-answer">Non c'è un minimo di ordini obbligatorio. Paghi €99/mese + gli ordini effettivi. Se un mese vai piano, paghi meno.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Posso iniziare con Freedom e poi decidere?</div>
+            <div class="faq-answer">Assolutamente sì! È la scelta consigliata. Prova, vedi i tuoi volumi reali, poi decidi se fare upgrade.</div>
+        </div>
+    </div>
+
+    <!-- CTA FINALE -->
+    <div style="text-align: center; margin-top: 60px;">
+        <p style="font-size: 1.2rem; margin-bottom: 20px;">Pronto a iniziare?</p>
+        <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20attivare%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>
+            <a href="/">← Torna alla Home</a>
+        </p>
+        <p style="margin-top: 15px;">
+            © 2025 Ordini-Lampo | Paolo Pizzo | P.IVA 01738420080
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

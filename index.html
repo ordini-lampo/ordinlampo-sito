@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordini-Lampo | METODO FREEDOM - Zero Vincoli, Paghi Solo Quello Che Usi</title>
+    <title>Ordini-Lampo | METODO FREEDOM - Lavora Libero, Paga Venerdì</title>
     <meta name="description" content="Sistema di ordinazione asporto per ristoranti. METODO FREEDOM: €1,20 per ordine, paghi solo venerdì. Zero vincoli, zero abbonamenti. Attivo in Liguria.">
     <meta name="keywords" content="ordinare poke sanremo, ordini ristorante, qr code menu, commissioni ristorante, asporto liguria, metodo freedom">
     <link rel="canonical" href="https://ordini-lampo.it">
@@ -142,100 +142,6 @@
         }
         .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; color: var(--accent-green-light); }
         .section-intro { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px; max-width: 700px; }
-        
-        /* NUOVO: Sezione Piani Pricing */
-        .pricing-section {
-            background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(74,222,128,0.05));
-            border-radius: 30px;
-            padding: 60px 40px;
-            margin: 40px 0;
-        }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .pricing-card {
-            background: var(--card-bg);
-            border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 35px 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .pricing-card:hover {
-            border-color: var(--border-glow);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .pricing-card.featured {
-            border-color: var(--accent-gold);
-            background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(251,191,36,0.05));
-        }
-        .pricing-card.featured::before {
-            content: '⭐ CONSIGLIATO';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--accent-gold), #FBBF24);
-            color: var(--gradient-start);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        .pricing-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--accent-green-light);
-        }
-        .pricing-card .price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--text-white);
-            margin: 15px 0;
-        }
-        .pricing-card .price small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-muted);
-        }
-        .pricing-card .features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            text-align: left;
-        }
-        .pricing-card .features li {
-            padding: 8px 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .pricing-card .features li::before {
-            content: '✓';
-            color: var(--accent-green-light);
-            font-weight: 700;
-        }
-        .pricing-card .tag {
-            display: inline-block;
-            background: rgba(34,197,94,0.2);
-            color: var(--accent-green-light);
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-top: 15px;
-        }
-        .pricing-card.featured .tag {
-            background: rgba(245,158,11,0.2);
-            color: var(--accent-gold);
-        }
         
         .thirty-seconds {
             background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(74,222,128,0.1));
@@ -442,7 +348,6 @@
             .cycle-day .day-num { font-size: 1.2rem; }
             .math-result { font-size: 2.2rem; }
             .data-points { flex-direction: column; gap: 12px; }
-            .pricing-grid { grid-template-columns: 1fr; }
         }
         @media print {
             body { background: white !important; color: #1a1a2e !important; font-size: 11pt; }
@@ -464,89 +369,23 @@
 <section class="hero">
     <div class="hero-content">
         <div class="logo-text"><span class="logo-bolt">⚡</span><span class="logo-name">Ordini–Lampo</span></div>
-        <div class="freedom-badge">🆓 Metodo Freedom</div>
+        <div class="freedom-badge">Metodo Freedom</div>
         <h1>Lavora <strong>libero</strong>, paga <strong>venerdì</strong>.<br>Solo quello che usi.</h1>
-        <div class="price-hero">Da €0,98 per ordine. Zero vincoli.</div>
-        <div class="price-hero-sub">Parti con METODO FREEDOM: €1,20/ordine, paghi solo venerdì.<br>Cresci? Sblocchi prezzi migliori fino a €0,68.</div>
+        <div class="price-hero">€1,20 per ordine. Tutto incluso.</div>
+        <div class="price-hero-sub">Nessun abbonamento. Nessun vincolo. Nessun anticipo.<br>Ricevi ordini, incassi subito, ci paghi venerdì.</div>
         <p class="hero-subtitle">Zero telefonate. Zero incomprensioni. Zero sorprese.</p>
         <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
         <div class="badge-location">📍 Attivo in <span>Liguria</span></div>
     </div>
 </section>
 
-<!-- NUOVA SEZIONE: PIANI PRICING -->
 <section class="section">
-    <h2 class="section-title" style="text-align: center;">📊 Cresci Con Noi</h2>
-    <p class="section-intro" style="text-align: center; margin: 0 auto 20px;">Parti senza rischi. Più cresci, più risparmi.</p>
-    
-    <div class="pricing-section">
-        <div class="pricing-grid">
-            <!-- FREEDOM -->
-            <div class="pricing-card">
-                <h3>🆓 FREEDOM</h3>
-                <div class="price">€1,20<small>/ordine</small></div>
-                <ul class="features">
-                    <li>Zero vincoli</li>
-                    <li>Paghi solo venerdì</li>
-                    <li>Esci quando vuoi</li>
-                    <li>10 ordini omaggio</li>
-                </ul>
-                <div class="tag">Per iniziare</div>
-            </div>
-            
-            <!-- LAMPO 500 - FEATURED -->
-            <div class="pricing-card featured">
-                <h3>⚡ LAMPO 500</h3>
-                <div class="price">€0,98<small>/ordine</small></div>
-                <ul class="features">
-                    <li>500 ordini prepagati</li>
-                    <li>-18% vs FREEDOM</li>
-                    <li>Mai scadono</li>
-                    <li>Totale: €490</li>
-                </ul>
-                <div class="tag">Più richiesto</div>
-            </div>
-            
-            <!-- MAX -->
-            <div class="pricing-card">
-                <h3>🚀 LAMPO MAX</h3>
-                <div class="price">€0,78<small>/ordine</small></div>
-                <ul class="features">
-                    <li>€99/mese + ordini</li>
-                    <li>-35% vs FREEDOM</li>
-                    <li>Min. 1.200 ordini/mese</li>
-                    <li>Supporto prioritario</li>
-                </ul>
-                <div class="tag">Alto volume</div>
-            </div>
-            
-            <!-- FRANCHISE -->
-            <div class="pricing-card">
-                <h3>🏢 FRANCHISE</h3>
-                <div class="price">€0,68<small>/ordine</small></div>
-                <ul class="features">
-                    <li>€249/mese + ordini</li>
-                    <li>-43% vs FREEDOM</li>
-                    <li>Multi-sede (2-5 locali)</li>
-                    <li>Account manager dedicato</li>
-                </ul>
-                <div class="tag">Catene</div>
-            </div>
-        </div>
-        
-        <p style="text-align: center; margin-top: 30px; color: var(--text-muted);">
-            💡 <strong>Non sai quale scegliere?</strong> Parti con FREEDOM. Puoi sempre fare upgrade dopo!
-        </p>
-    </div>
-</section>
-
-<section class="section section-dark">
     <div class="thirty-seconds">
-        <h2>⏱️ Come Funziona METODO FREEDOM (30 secondi)</h2>
+        <h2>⏱️ Come Funziona (30 secondi)</h2>
         <div class="thirty-steps">
             <div class="thirty-step">
                 <div class="number">1</div>
-                <div class="text">Ricevi ordini dai tuoi clienti.<br><strong>Tu incassi subito</strong> da loro.</div>
+                <div class="text">I tuoi clienti ordinano dal QR.<br><strong>Tu incassi subito</strong> da loro.</div>
             </div>
             <div class="thirty-step">
                 <div class="number">2</div>
@@ -560,7 +399,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <h2 class="section-title">🎯 A Chi Serve Ordini-Lampo?</h2>
     <div class="target-box">
         <h3>Aiutiamo i ristoratori a servire meglio i clienti che vogliono ordinare<br><strong>FACILE • COMODO • SUBITO</strong></h3>
@@ -593,7 +432,7 @@
     </div>
 </section>
 
-<section class="section section-dark">
+<section class="section">
     <h2 class="section-title">🎁 Cosa Ti Offriamo</h2>
     <p class="section-intro">Un servizio <strong>alla carta</strong>. Scegli tu quando usarlo, come usarlo, e lo personalizzi a modo tuo.</p>
     <div class="offer-grid">
@@ -620,7 +459,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <h2 class="section-title">🛡️ Perché Puoi Fidarti</h2>
     <div class="trust-grid">
         <div class="trust-item">
@@ -650,7 +489,7 @@
     </div>
 </section>
 
-<section class="section section-dark">
+<section class="section">
     <div class="reflection-box">
         <h3>💡 Una Riflessione</h3>
         <p>I servizi di consegna ti fanno pagare una commissione per ogni ordine.</p>
@@ -659,26 +498,27 @@
         <p>Anche se tornerebbe da te comunque.</p>
         <p style="margin-top: 20px;">Ti sei mai chiesto quanti dei tuoi clienti asporto sono <span class="emphasis">abitudinari</span>? Quelli che tornano ogni settimana?</p>
         <p style="margin-top: 20px;">Noi non siamo un servizio di consegna. Non ti portiamo clienti nuovi.</p>
-        <p>Ti aiutiamo a <span class="emphasis">fidelizzare i tuoi</span>. A servirli meglio. Ordini chiari, zero errori, zero stress. Da <span class="emphasis">€0,68 a €1,20</span> per ordine.</p>
+        <p>Ti aiutiamo a <span class="emphasis">fidelizzare i tuoi</span>. A servirli meglio. Ordini chiari, zero errori, zero stress. A soli <span class="emphasis">€1,20</span> per ordine.</p>
         <p class="final">Siamo uno strumento di comodità. Per te e per i tuoi clienti.</p>
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <div class="faq-rapid">
         <h3>🤔 Domande Che Ti Stai Facendo</h3>
         <div class="faq-item-rapid"><div class="question">"Cos'è il METODO FREEDOM?"</div><div class="answer">→ Lavori libero, paghi venerdì solo gli ordini ricevuti. €1,20 cad.</div></div>
-        <div class="faq-item-rapid"><div class="question">"Come posso pagare meno di €1,20?"</div><div class="answer">→ Con LAMPO 500 (€0,98), MAX (€0,78) o FRANCHISE (€0,68).</div></div>
-        <div class="faq-item-rapid"><div class="question">"Devo pagare altro oltre agli ordini?"</div><div class="answer">→ Con FREEDOM no. MAX e FRANCHISE hanno fee mensile.</div></div>
-        <div class="faq-item-rapid"><div class="question">"E se non mi piace?"</div><div class="answer">→ Salda gli ordini ricevuti e vai. Nessun vincolo con FREEDOM.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Devo pagare altro oltre agli ordini?"</div><div class="answer">→ No. Nessun abbonamento, nessun costo nascosto.</div></div>
+        <div class="faq-item-rapid"><div class="question">"E se non mi piace?"</div><div class="answer">→ Salda gli ordini ricevuti e vai. Nessun vincolo.</div></div>
         <div class="faq-item-rapid"><div class="question">"Quanto tempo ci vuole per partire?"</div><div class="answer">→ 180 secondi. Installiamo tutto noi.</div></div>
         <div class="faq-item-rapid"><div class="question">"E se ho problemi?"</div><div class="answer">→ WhatsApp. Ti rispondiamo in giornata.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Funziona sul mio telefono/tablet?"</div><div class="answer">→ Sì. Android, iPhone, iPad. Qualsiasi.</div></div>
+        <div class="faq-item-rapid"><div class="question">"E se dimentico di pagare venerdì?"</div><div class="answer">→ Addebito automatico. Non devi fare nulla.</div></div>
         <div class="faq-item-rapid"><div class="question">"Chi altro lo usa?"</div><div class="answer">→ Stiamo partendo in Liguria. Sei tra i primi!</div></div>
         <div class="faq-item-rapid"><div class="question">"Perché dovrei fidarmi?"</div><div class="answer">→ 10 ordini gratis. Se non ti piace, €0.</div></div>
     </div>
 </section>
 
-<section class="section section-dark">
+<section class="section">
     <div class="data-section">
         <h3>🔐 I Tuoi Dati, Il Tuo Controllo</h3>
         <p>I dati dei clienti servono <strong>solo</strong> per recapitare gli ordini. Punto.</p>
@@ -692,7 +532,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <h2 class="section-title">🏦 Il Ciclo FREEDOM</h2>
     <p class="section-intro">Lavora libero tutta la settimana. Paga solo venerdì.</p>
     <div class="cycle-box">
@@ -708,7 +548,7 @@
         </div>
         <div class="cycle-legend">
             <p>📱 <strong>Sab-Mer</strong> = Lavori e incassi dai clienti</p>
-            <p>📊 <strong>Giovedì</strong> = Ricevi riepilogo ordini</p>
+            <p>📊 <strong>Giovedì</strong> = Ricevi riepilogo ordini su WhatsApp</p>
             <p>💳 <strong>Venerdì</strong> = Addebito automatico (€1,20 × ordini)</p>
         </div>
     </div>
@@ -730,7 +570,7 @@
     </div>
 </section>
 
-<section class="section section-dark">
+<section class="section">
     <h2 class="section-title">⏱️ Il Tempo (e lo Stress) Che Ti Restituiamo</h2>
     <div class="time-section">
         <div class="time-compact">
@@ -749,11 +589,11 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <h2 class="section-title">🧮 La Matematica Che Conta</h2>
     <div class="math-box">
-        <p style="font-size: 1.2rem; margin-bottom: 15px;">METODO FREEDOM = €1,20 per ordine</p>
-        <div class="math-result">Tu paghi: da €0,68 a €1,20<small>Su un ordine medio di €12-25, tu tieni tutto il resto.</small></div>
+        <p style="font-size: 1.2rem; margin-bottom: 15px;">1 Ordine ricevuto = €1,20 per noi</p>
+        <div class="math-result">Tu tieni tutto il resto<small>Su un ordine medio di €12-25, €1,20 è niente.</small></div>
     </div>
     <table class="compare-table">
         <thead><tr><th>Cosa ottieni</th><th>📞 Ordini telefonici</th><th>🟢 Ordini-Lampo</th></tr></thead>
@@ -761,12 +601,12 @@
             <tr><td>Ordine chiaro e scritto</td><td class="bad">❌ Errori frequenti</td><td class="good">✅ Tutto scritto</td></tr>
             <tr><td>Tempo staff al telefono</td><td class="bad">⏰ Perso a rispondere</td><td class="good">✅ Libero per cucinare</td></tr>
             <tr><td>Orario ritiro preciso</td><td class="bad">❌ "Tra 20 minuti..."</td><td class="good">✅ Scelto dal cliente</td></tr>
-            <tr><td>Costo per ordine</td><td>€0 (ma stress e errori)</td><td class="good">€0,68-€1,20 (pace mentale)</td></tr>
+            <tr><td>Costo per ordine</td><td>€0 (ma stress e errori)</td><td class="good">€1,20 (pace mentale)</td></tr>
         </tbody>
     </table>
 </section>
 
-<section class="section section-dark">
+<section class="section">
     <h2 class="section-title">🗣️ Nuovi Clienti? Li Portano i Tuoi Clienti</h2>
     <p class="section-intro">Niente pubblicità costosa. Abbiamo scelto il <strong>passaparola incentivato</strong>.</p>
     <div class="referral-section">
@@ -778,7 +618,7 @@
             <ul>
                 <li><span class="check">✅</span> Tu non spendi nulla per la pubblicità</li>
                 <li><span class="check">✅</span> Noi rischiamo i nostri soldi per portarti clienti</li>
-                <li><span class="check">✅</span> Tu paghi solo da €0,68 a €1,20 per ordine ricevuto</li>
+                <li><span class="check">✅</span> Tu paghi solo €1,20 per ordine ricevuto</li>
             </ul>
             <p style="margin-top: 15px; font-style: italic; color: var(--text-muted);">In pratica: ti regaliamo il servizio di acquisizione clienti.</p>
         </div>
@@ -789,16 +629,139 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-dark">
     <h2 class="section-title">📈 L'Inflazione Ti Sta Mangiando i Margini</h2>
+    <p class="section-intro">Ecco quanto sono aumentati i tuoi costi negli ultimi 3 anni:</p>
+    
     <div class="inflation-grid">
-        <div class="inflation-item"><div class="ingredient">🍚</div><div class="name">Riso</div><div class="percent">+50%</div></div>
-        <div class="inflation-item"><div class="ingredient">🫒</div><div class="name">Olio</div><div class="percent">+42%</div></div>
-        <div class="inflation-item"><div class="ingredient">🐟</div><div class="name">Salmone</div><div class="percent">+35%</div></div>
-        <div class="inflation-item"><div class="ingredient">🥑</div><div class="name">Avocado</div><div class="percent">+28%</div></div>
+        <div class="inflation-item">
+            <div class="ingredient">🍚</div>
+            <div class="name">Riso</div>
+            <div class="percent">+50%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">da €1,80 a €2,70/kg</div>
+        </div>
+        <div class="inflation-item">
+            <div class="ingredient">🫒</div>
+            <div class="name">Olio EVO</div>
+            <div class="percent">+42%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">da €7 a €9,90/L</div>
+        </div>
+        <div class="inflation-item">
+            <div class="ingredient">🐟</div>
+            <div class="name">Salmone</div>
+            <div class="percent">+35%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">da €18 a €24/kg</div>
+        </div>
+        <div class="inflation-item">
+            <div class="ingredient">🥑</div>
+            <div class="name">Avocado</div>
+            <div class="percent">+28%</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;">da €2,50 a €3,20 cad</div>
+        </div>
     </div>
-    <div class="inflation-total"><div class="label">Inflazione cumulata 2021-2024</div><div class="value">+17,3%</div></div>
-    <div class="inflation-solution"><div class="label">Ogni centesimo conta. Ordini-Lampo costa solo</div><div class="value">Da €0,68 / ordine</div></div>
+    
+    <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 20px;">
+        📊 Fonti: ISTAT, Coldiretti, Osservatorio Prezzi MISE (2021-2024)
+    </p>
+    
+    <div class="inflation-total">
+        <div class="label">Impatto stimato sui tuoi costi</div>
+        <div class="value">-€150/200 al mese</div>
+    </div>
+
+    <!-- NICCHIA IGNORATA -->
+    <div class="reflection-box" style="margin-top: 50px;">
+        <h3>💡 Ma c'è una nicchia che oggi stai ignorando</h3>
+        <p>Clienti che <span class="emphasis">vorrebbero ordinare da te</span>, ma non lo fanno perché:</p>
+        
+        <div style="margin-top: 25px; display: grid; gap: 12px;">
+            <div style="background: rgba(0,0,0,0.2); padding: 18px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">👴</span>
+                    <span><strong>Anziani</strong> – Usano WhatsApp, non le app delivery</span>
+                </div>
+                <span style="color: var(--accent-green-light); font-weight: 700;">+€120/mese</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 18px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">😤</span>
+                    <span><strong>Delusi dal delivery</strong> – Ritardi, errori, vogliono ordinare diretto</span>
+                </div>
+                <span style="color: var(--accent-green-light); font-weight: 700;">+€192/mese</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 18px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">📵</span>
+                    <span><strong>"No app"</strong> – Non vogliono scaricare l'ennesima app</span>
+                </div>
+                <span style="color: var(--accent-green-light); font-weight: 700;">+€120/mese</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 18px 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">📞</span>
+                    <span><strong>Introversi</strong> – Preferiscono scrivere che telefonare</span>
+                </div>
+                <span style="color: var(--accent-green-light); font-weight: 700;">+€120/mese</span>
+            </div>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">
+            Stime conservative: 5-10 clienti per categoria, 1-2 ordini/mese, bowl medio €12
+        </p>
+    </div>
+
+    <!-- CALCOLO GUADAGNO -->
+    <div style="background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(74,222,128,0.05)); border: 2px solid var(--accent-green); border-radius: 20px; padding: 35px; margin-top: 30px; text-align: center;">
+        <h3 style="font-size: 1.3rem; margin-bottom: 25px;">📱 Con Ordini-Lampo raggiungi questa nicchia</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 500px; margin: 0 auto;">
+            <div style="background: rgba(0,0,0,0.2); border-radius: 15px; padding: 20px;">
+                <div style="font-size: 0.9rem; color: var(--text-muted);">Potenziale extra</div>
+                <div style="font-size: 2rem; font-weight: 800; color: var(--accent-green-light);">+€552</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">~46 ordini/mese</div>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); border-radius: 15px; padding: 20px;">
+                <div style="font-size: 0.9rem; color: var(--text-muted);">Costo servizio</div>
+                <div style="font-size: 2rem; font-weight: 800; color: #ef4444;">-€55</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">46 × €1,20</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 25px; padding: 20px; background: var(--accent-green); border-radius: 15px; color: var(--gradient-start);">
+            <div style="font-size: 1rem; font-weight: 500;">Guadagno netto stimato</div>
+            <div style="font-size: 2.5rem; font-weight: 900;">+€497/mese</div>
+        </div>
+    </div>
+
+    <!-- CONFRONTO FINALE -->
+    <div style="background: var(--card-bg); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 35px; margin-top: 30px;">
+        <h3 style="font-size: 1.3rem; margin-bottom: 25px; text-align: center;">📊 Il Bilancio (stime conservative)</h3>
+        
+        <div style="max-width: 400px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <span style="color: var(--text-muted);">Inflazione ingredienti</span>
+                <span style="color: #ef4444; font-weight: 700;">-€175/mese</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <span style="color: var(--text-muted);">Guadagno nicchia recuperata</span>
+                <span style="color: var(--accent-green-light); font-weight: 700;">+€497/mese</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 15px 0; margin-top: 5px;">
+                <span style="font-weight: 700; font-size: 1.1rem;">SALDO</span>
+                <span style="color: var(--accent-green-light); font-weight: 900; font-size: 1.3rem;">+€322/mese</span>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 25px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+            L'inflazione non sparisce.<br>
+            Ma con Ordini-Lampo puoi recuperare margine<br>
+            da clienti che oggi non stai servendo.
+        </p>
+        
+        <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
+            I risultati possono variare in base alla zona, al tipo di locale e al volume esistente.
+        </p>
+    </div>
 </section>
 
 <section class="deep-section">
@@ -806,7 +769,7 @@
         <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">📖 Il Metodo FREEDOM nel Dettaglio</h2>
         
         <div class="deep-box">
-            <h4>📅 Flusso Settimanale FREEDOM</h4>
+            <h4>📅 Flusso Settimanale</h4>
             <div class="flow-step"><div class="icon">📱</div><div class="content"><div class="title">SABATO-MERCOLEDÌ - Lavori</div><div class="desc">Ricevi ordini, incassi subito dai clienti. Noi contiamo in background.</div></div></div>
             <div class="flow-arrow">⬇️</div>
             <div class="flow-step"><div class="icon">📊</div><div class="content"><div class="title">GIOVEDÌ SERA - Riepilogo</div><div class="desc">Notifica WhatsApp: "Questa settimana hai ricevuto 22 ordini = €26,40"</div></div></div>
@@ -814,20 +777,6 @@
             <div class="flow-step"><div class="icon">💳</div><div class="content"><div class="title">VENERDÌ - Addebito automatico</div><div class="desc">Pagamento sulla carta. Non devi fare nulla.</div></div></div>
             <div class="flow-arrow">⬇️</div>
             <div class="flow-step"><div class="icon">🔄</div><div class="content"><div class="title">VENERDÌ - Nuovo ciclo</div><div class="desc">Si riparte! Altra settimana di lavoro libero.</div></div></div>
-        </div>
-        
-        <div class="deep-box">
-            <h4>🚀 Vuoi Risparmiare? Fai Upgrade!</h4>
-            <div class="flow-step"><div class="icon">🆓</div><div class="content"><div class="title">FREEDOM → €1,20/ordine</div><div class="desc">Perfetto per iniziare. Zero vincoli, paghi venerdì.</div></div></div>
-            <div class="flow-arrow">⬇️</div>
-            <div class="flow-step"><div class="icon">⚡</div><div class="content"><div class="title">LAMPO 500 → €0,98/ordine (-18%)</div><div class="desc">Prepaghi 500 ordini a €490. Non scadono mai.</div></div></div>
-            <div class="flow-arrow">⬇️</div>
-            <div class="flow-step"><div class="icon">🚀</div><div class="content"><div class="title">MAX → €0,78/ordine (-35%)</div><div class="desc">Per chi fa 1.200+ ordini/mese. €99/mese + ordini.</div></div></div>
-            <div class="flow-arrow">⬇️</div>
-            <div class="flow-step"><div class="icon">🏢</div><div class="content"><div class="title">FRANCHISE → €0,68/ordine (-43%)</div><div class="desc">Per catene 2-5 sedi. €249/mese + ordini.</div></div></div>
-            <p style="margin-top: 25px; padding: 20px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); border-radius: 10px; text-align: center;">
-                <strong>💡 CONSIGLIO:</strong> Parti con FREEDOM. Quando vedi che funziona, fai upgrade!
-            </p>
         </div>
         
         <div class="deep-box">
@@ -843,8 +792,8 @@
 
 <section class="footer-cta">
     <h2>Pronto a Lavorare Libero?</h2>
-    <p class="tagline">Parti con METODO FREEDOM. Zero vincoli, paghi solo venerdì.</p>
-    <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20e%20METODO%20FREEDOM%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
+    <p class="tagline">METODO FREEDOM: €1,20 per ordine. Paghi solo venerdì. Zero vincoli.</p>
+    <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
     <div class="contact-info"><p>📧 <a href="mailto:ordini-lampo@proton.me">ordini-lampo@proton.me</a></p></div>
     <div class="multilingual"><span>🇮🇹 Italiano</span><span>🇫🇷 Français</span><span>🇬🇧 English</span></div>
 </section>

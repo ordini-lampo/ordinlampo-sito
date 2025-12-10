@@ -7,20 +7,6 @@
     <meta name="description" content="Sistema di ordinazione per ristoranti. €1,20 per ordine, paghi solo il venerdì. QR code personalizzato, zero telefonate, incasso immediato. Attivo in Liguria.">
     <meta name="keywords" content="ordinare poke sanremo, ordini ristorante, qr code menu, asporto liguria, ordinazioni whatsapp">
     <link rel="canonical" href="https://ordini-lampo.it">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ordini-Lampo | METODO FREEDOM - Lavora Libero, Paga Venerdì">
-    <meta property="og:description" content="Sistema di ordinazione per ristoranti. €1,20 per ordine, paghi solo il venerdì. QR code personalizzato, zero telefonate, incasso immediato. Attivo in Liguria.">
-    <meta property="og:url" content="https://ordini-lampo.it">
-    <meta property="og:image" content="https://ordini-lampo.it/og-image.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ordini-Lampo | METODO FREEDOM - Lavora Libero, Paga Venerdì">
-    <meta name="twitter:description" content="Sistema di ordinazione per ristoranti. €1,20 per ordine, paghi solo il venerdì. QR code personalizzato, zero telefonate, incasso immediato. Attivo in Liguria.">
-    <meta name="twitter:image" content="https://ordini-lampo.it/og-image.jpg">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -40,7 +26,6 @@
             --card-border: rgba(255, 255, 255, 0.1);
             --border-glow: rgba(34, 197, 94, 0.5);
             --glass-blur: blur(12px);
-            --accent-white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -73,7 +58,6 @@
             transform: translateY(0);
         }
 
-        /* TOP BAR */
         .top-bar {
             background: rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
@@ -99,7 +83,6 @@
         }
         .top-bar a:hover { color: var(--text-white); }
         
-        /* HERO */
         .hero {
             min-height: 85vh;
             display: flex;
@@ -161,7 +144,6 @@
         .hero h1 { font-size: 2.5rem; font-weight: 300; margin-bottom: 25px; line-height: 1.3; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
         .hero h1 strong { font-weight: 700; color: var(--accent-green-light); position: relative; display: inline-block; }
         
-        /* FASCIA UNIFICATA */
         .hero-main-strip {
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -202,7 +184,6 @@
         }
         .hero-subtitle { font-size: 1.15rem; color: var(--text-white); margin: 0; font-weight: 500; letter-spacing: 0.5px; }
         
-        /* CTA BUTTON */
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-green), #16a34a);
@@ -258,7 +239,6 @@
             font-weight: 500;
         }
         
-        /* CARD STYLES GENERALI */
         .glass-box {
             background: var(--card-bg);
             backdrop-filter: var(--glass-blur);
@@ -268,7 +248,104 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        /* SECTIONS GENERALI */
+        .video-section {
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .video-section-inner { max-width: 900px; margin: 0 auto; }
+        .video-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-orange-light);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .video-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2; }
+        .video-subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 45px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .video-placeholder {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: linear-gradient(135deg, #2d1b36, #1a1a2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-placeholder-content {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .video-play-icon {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            transition: transform 0.3s;
+            cursor: pointer;
+            filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+        }
+        .video-play-icon:hover { transform: scale(1.1); }
+        .video-description {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px 40px;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+        .video-description .emphasis { color: var(--accent-green-light); font-weight: 600; }
+        
+        .video-cta-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        
+        .video-cta-primary {
+            display: inline-block;
+            background: var(--accent-green);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s ease;
+        }
+        .video-cta-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(34, 197, 94, 0.6); }
+        
+        .video-cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .video-cta-secondary:hover { border-color: var(--accent-green-light); color: var(--accent-green-light); background: rgba(34,197,94,0.05); }
+        
         .section { padding: 90px 20px; max-width: 1100px; margin: 0 auto; }
         .section-dark {
             background: rgba(0,0,0,0.2);
@@ -280,8 +357,7 @@
         .section-inner { max-width: 1100px; margin: 0 auto; }
         .section-title { font-size: 2.3rem; font-weight: 700; margin-bottom: 20px; color: var(--accent-green-light); text-align: center; }
         .section-intro { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 50px; max-width: 750px; margin-left: auto; margin-right: auto; text-align: center; }
-
-        /* 30 SECONDS BOX */
+        
         .thirty-seconds {
             background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(0,0,0,0.4));
             border: 1px solid var(--accent-green);
@@ -305,8 +381,7 @@
         .thirty-step:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
         .thirty-step .number { font-size: 3rem; font-weight: 900; color: var(--accent-green-light); margin-bottom: 15px; text-shadow: 0 0 15px rgba(34,197,94,0.4); }
         .thirty-step .text { font-size: 1.05rem; }
-
-        /* DEMO BOX */
+        
         .demo-box {
             background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.4));
             border: 1px solid var(--accent-orange);
@@ -343,26 +418,7 @@
             letter-spacing: 1px;
         }
         .demo-link:hover { background: var(--accent-orange); color: #1a1a2e; box-shadow: 0 0 20px rgba(245,158,11,0.4); }
-
-        /* TRUST GRID */
-        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .trust-item { 
-            display: flex; 
-            gap: 15px; 
-            align-items: flex-start; 
-            background: var(--card-bg);
-            backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--card-border);
-            padding: 25px; 
-            border-radius: 20px; 
-            transition: background 0.3s;
-        }
-        .trust-item:hover { background: rgba(255,255,255,0.06); }
-        .trust-item .icon { font-size: 2rem; flex-shrink: 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 15px; }
-        .trust-item h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-white); }
-        .trust-item p { font-size: 0.95rem; color: var(--text-muted); }
-
-        /* OFFER CARDS */
+        
         .offer-grid { display: grid; gap: 25px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         .offer-card {
             background: var(--card-bg);
@@ -390,8 +446,24 @@
         }
         .offer-card h3 { font-size: 1.4rem; margin-bottom: 15px; margin-top: 10px; font-weight: 700; }
         .offer-card p { color: var(--text-muted); font-size: 1rem; }
-
-        /* CHI SIAMO */
+        
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .trust-item { 
+            display: flex; 
+            gap: 15px; 
+            align-items: flex-start; 
+            background: var(--card-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--card-border);
+            padding: 25px; 
+            border-radius: 20px; 
+            transition: background 0.3s;
+        }
+        .trust-item:hover { background: rgba(255,255,255,0.06); }
+        .trust-item .icon { font-size: 2rem; flex-shrink: 0; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 15px; }
+        .trust-item h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-white); }
+        .trust-item p { font-size: 0.95rem; color: var(--text-muted); }
+        
         .chi-siamo-box {
             background: var(--card-bg);
             backdrop-filter: var(--glass-blur);
@@ -400,7 +472,7 @@
             padding: 50px;
             display: flex;
             gap: 40px;
-            align-items: flex-start;
+            align-items: center;
             margin: 50px 0;
         }
         .chi-siamo-avatar {
@@ -417,13 +489,8 @@
             box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
             border: 4px solid rgba(255,255,255,0.1);
         }
-        .chi-siamo-text { text-align: left; }
         .chi-siamo-text h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--accent-green-light); }
-        .chi-siamo-text p { text-align: left; }
-        .chi-siamo-text ul { text-align: left; list-style: none; padding: 0; margin: 15px 0; }
-        .chi-siamo-text ul li { margin-bottom: 10px; color: var(--text-muted); padding-left: 5px; }
-
-        /* REFLECTION BOX */
+        
         .reflection-box {
             background: var(--card-bg);
             backdrop-filter: var(--glass-blur);
@@ -434,8 +501,19 @@
             margin: 40px 0;
         }
         .reflection-box h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-green-light); }
-
-        /* CYCLE BOX */
+        
+        .faq-rapid {
+            background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(255,255,255,0.02));
+            border: 1px solid var(--card-border);
+            backdrop-filter: var(--glass-blur);
+            border-radius: 30px;
+            padding: 40px;
+        }
+        .faq-item-rapid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center; }
+        .faq-item-rapid:last-child { border-bottom: none; }
+        .faq-item-rapid .question { font-style: italic; color: var(--text-muted); font-size: 1rem; }
+        .faq-item-rapid .answer { font-weight: 600; color: var(--accent-green-light); font-size: 1rem; }
+        
         .cycle-box {
             background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(0,0,0,0.2));
             border: 2px solid var(--accent-green);
@@ -452,68 +530,58 @@
         .cycle-day .day-name { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; opacity: 0.8; }
         .cycle-day .day-num { font-size: 1.5rem; font-weight: 800; margin-top: 5px; }
 
-        /* INFLAZIONE BOX */
-        .inflazione-box {
-            background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(0,0,0,0.3));
-            border: 1px solid rgba(239,68,68,0.5);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 35px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        .inflazione-box h3 { color: #fca5a5; margin-bottom: 15px; }
-        .inflazione-box .big-number { font-size: 3rem; font-weight: 900; color: #ef4444; }
-        .inflazione-box p { color: var(--text-muted); }
-
-        /* DIVANO BOX - LA SEZIONE CHE SPIAZZA */
-        .divano-section {
-            background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(34,197,94,0.1));
+        /* SEZIONE PARLIAMOCI CHIARO */
+        .parliamochiaro-section {
+            background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(34,197,94,0.08));
             border-top: 3px solid var(--accent-orange);
             border-bottom: 3px solid var(--accent-green);
             padding: 80px 20px;
             margin: 60px 0;
         }
-        .divano-inner {
+        .parliamochiaro-inner {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-        .divano-emoji {
+        .parliamochiaro-emoji {
             font-size: 4rem;
             margin-bottom: 20px;
         }
-        .divano-title {
+        .parliamochiaro-title {
             font-size: 2rem;
             font-weight: 800;
             color: var(--text-white);
             margin-bottom: 30px;
             line-height: 1.3;
         }
-        .divano-text {
+        .parliamochiaro-text {
             background: rgba(0,0,0,0.3);
             border-radius: 20px;
             padding: 40px;
             text-align: left;
             margin-bottom: 30px;
         }
-        .divano-text p {
+        .parliamochiaro-text p {
             color: var(--text-muted);
             font-size: 1.1rem;
             margin-bottom: 20px;
             line-height: 1.8;
         }
-        .divano-text p:last-child { margin-bottom: 0; }
-        .divano-text .highlight-line {
+        .parliamochiaro-text p:last-child { margin-bottom: 0; }
+        .parliamochiaro-text .highlight-line {
             color: var(--accent-green-light);
             font-weight: 600;
-            font-size: 1.2rem;
         }
-        .divano-text .question {
+        .parliamochiaro-text .question-line {
             color: var(--accent-orange-light);
             font-style: italic;
         }
-        .divano-cta {
+        .parliamochiaro-text .strong-line {
+            color: var(--text-white);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+        .parliamochiaro-cta {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
             color: #1a1a2e;
@@ -525,344 +593,298 @@
             box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
             transition: all 0.3s ease;
         }
-        .divano-cta:hover {
+        .parliamochiaro-cta:hover {
             transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
         }
-        .divano-note {
+        .parliamochiaro-note {
             margin-top: 20px;
             font-size: 0.95rem;
             color: var(--text-muted);
             opacity: 0.8;
         }
 
-        /* FAQ */
-        .faq-rapid {
-            background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(255,255,255,0.02));
-            border: 1px solid var(--card-border);
-            backdrop-filter: var(--glass-blur);
-            border-radius: 30px;
-            padding: 40px;
-        }
-        .faq-item-rapid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); align-items: center; }
-        .faq-item-rapid:last-child { border-bottom: none; }
-        .faq-item-rapid .question { font-style: italic; color: var(--text-muted); font-size: 1rem; }
-        .faq-item-rapid .answer { font-weight: 600; color: var(--accent-green-light); font-size: 1rem; }
-
-        /* FOOTER CTA */
         .footer-cta { text-align: center; padding: 100px 20px 60px; }
         .footer-cta h2 { font-size: 2.5rem; margin-bottom: 15px; }
         .contact-info a { text-decoration: none; font-weight: 600; transition: color 0.3s; }
         .contact-info a:hover { color: #fff !important; }
 
-        /* FOOTER */
         .footer { background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); padding: 30px 20px; text-align: center; font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); }
-        .footer a { color: var(--accent-green-light); text-decoration: none; opacity: 0.8; margin: 0 10px; }
+        .footer a { color: var(--accent-green-light); text-decoration: none; opacity: 0.8; }
         .footer a:hover { opacity: 1; }
 
-        /* PREFER-REDUCED-MOTION */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                scroll-behavior: auto !important;
-                animation-duration: 0.001ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.001ms !important;
-            }
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; gap: 10px; font-size: 0.85rem; padding: 15px; }
             .logo-text { font-size: 2.2rem; }
             .hero h1 { font-size: 1.8rem; }
-            .freedom-title { font-size: 1.6rem; }
-            .price-hero { font-size: 1.5rem; }
+            .video-title { font-size: 1.8rem; }
             .thirty-steps { flex-direction: column; }
             .trust-grid { grid-template-columns: 1fr; }
-            .offer-grid { grid-template-columns: 1fr; }
             .faq-item-rapid { grid-template-columns: 1fr; gap: 8px; }
             .cycle-day { min-width: 45px; padding: 10px 5px; }
             .cycle-day .day-num { font-size: 1.2rem; }
-            .chi-siamo-box { flex-direction: column; text-align: left; padding: 30px; }
-            .chi-siamo-text { text-align: left; }
-            .chi-siamo-avatar { align-self: center; }
-            .divano-title { font-size: 1.5rem; }
-            .divano-text { padding: 25px; }
-            .divano-text p { font-size: 1rem; }
+            .chi-siamo-box { flex-direction: column; text-align: center; padding: 30px; }
+            .chi-siamo-text { text-align: center; }
+            .parliamochiaro-title { font-size: 1.5rem; }
+            .parliamochiaro-text { padding: 25px; }
+            .parliamochiaro-text p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="top-bar">
-        <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo">💬 WhatsApp: +39 389 638 2394</a>
-        <a href="mailto:ordini-lampo@proton.me">📧 ordini-lampo@proton.me</a>
+<div class="top-bar">
+    <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo">💬 WhatsApp: +39 389 638 2394</a>
+    <a href="mailto:ordini-lampo@proton.me">📧 ordini-lampo@proton.me</a>
+</div>
+
+<section class="hero">
+    <div class="hero-content reveal">
+        <div class="logo-text"><span class="logo-bolt">⚡</span><span class="logo-name">Ordini<span style="margin: 0 2px;">–</span>Lampo</span></div>
+        
+        <h1>Lavora <strong>libero</strong>, paga <strong>il venerdì</strong>.<br>Solo quello che usi.</h1>
+        
+        <div class="hero-main-strip">
+            <div class="freedom-section">
+                <span class="freedom-title">⚡ Metodo Freedom</span>
+            </div>
+            <div class="strip-divider"></div>
+            <div class="price-section">
+                <div class="price-hero">€1,20 per ordine. Tutto incluso.</div>
+                <div class="price-hero-sub">Nessun abbonamento. Nessun vincolo. Nessun anticipo.<br>Ricevi ordini, incassi subito, ci paghi il venerdì.</div>
+            </div>
+        </div>
+        
+        <div class="hero-zero-strip">
+            <p class="hero-subtitle">Zero telefonate. Zero incomprensioni. Zero sorprese.</p>
+        </div>
+        
+        <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
+        <div class="badge-location">📍 Attivo in <span>Liguria</span></div>
     </div>
-</header>
+</section>
 
-<main>
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content reveal">
-            <div class="logo-text"><span class="logo-bolt">⚡</span><span class="logo-name">Ordini<span style="margin: 0 2px;">–</span>Lampo</span></div>
-            
-            <h1>Lavora <strong>libero</strong>, paga <strong>il venerdì</strong>.<br>Solo quello che usi.</h1>
-            
-            <div class="hero-main-strip">
-                <div class="freedom-section">
-                    <span class="freedom-title">⚡ Metodo Freedom</span>
-                </div>
-                <div class="strip-divider"></div>
-                <div class="price-section">
-                    <div class="price-hero">€1,20 per ordine. Tutto incluso.</div>
-                    <div class="price-hero-sub">Nessun abbonamento. Nessun vincolo. Nessun anticipo.<br>Ricevi ordini, incassi subito, ci paghi il venerdì.</div>
-                </div>
-            </div>
-            
-            <div class="hero-zero-strip">
-                <p class="hero-subtitle">Zero telefonate. Zero incomprensioni. Zero sorprese.</p>
-            </div>
-            
-            <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
-            <div class="badge-location">📍 Attivo in <span>Liguria</span></div>
-        </div>
-    </section>
-
-    <!-- COME FUNZIONA (30 secondi) -->
-    <section class="section reveal" id="come-funziona">
-        <div class="thirty-seconds">
-            <h2 style="font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 40px;">⏱️ Come Funziona (30 secondi)</h2>
-            <div class="thirty-steps">
-                <div class="thirty-step">
-                    <div class="number">1</div>
-                    <div class="text">I tuoi clienti ordinano dal <strong>QR code</strong>.<br>Tu incassi subito da loro.</div>
-                </div>
-                <div class="thirty-step">
-                    <div class="number">2</div>
-                    <div class="text">Lavori tutta la settimana.<br><strong>Senza pensieri.</strong></div>
-                </div>
-                <div class="thirty-step">
-                    <div class="number">3</div>
-                    <div class="text">Venerdì paghi solo gli ordini ricevuti.<br><strong>€1,20 l'uno.</strong> Fine.</div>
+<section class="video-section">
+    <div class="video-section-inner reveal">
+        <div class="video-badge">📹 Video Presentazione</div>
+        <h2 class="video-title">Scopri Ordini-Lampo in 2 Minuti</h2>
+        <p class="video-subtitle">Guarda come funziona e perché centinaia di ristoratori stanno cambiando il modo di ricevere ordini.</p>
+        
+        <div class="video-container">
+            <div class="video-placeholder">
+                <div class="video-placeholder-content">
+                    <div class="video-play-icon">▶️</div>
+                    <p style="font-size: 1.2rem; font-weight: 600; color: #fff; margin-top: 10px;">Video in arrivo...</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Stiamo girando a Sanremo</p>
                 </div>
             </div>
         </div>
         
-        <!-- DEMO QR -->
-        <div class="demo-box reveal">
-            <h3>📱 Prova Tu Stesso</h3>
-            <p style="color: var(--text-muted); margin-bottom: 25px;">Scansiona il QR o clicca il link per vedere come ordinano i tuoi clienti.</p>
-            <div class="demo-qr">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://ordinlampo.netlify.app/?r=demo-ordinilampo" alt="QR Code Demo" loading="lazy">
-            </div>
-            <br>
-            <a href="https://ordinlampo.netlify.app/?r=demo-ordinilampo" target="_blank" rel="noopener noreferrer" class="demo-link">🔗 Apri la Demo</a>
-            <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.7;">Demo gratuita • Nessuna registrazione richiesta</p>
+        <div class="video-description glass-box">
+            <p style="font-size: 1.1rem; color: var(--text-muted);">In questo video ti mostro <span class="emphasis">esattamente come funziona</span> Ordini-Lampo: dalla scansione del QR code da parte del cliente, fino all'arrivo dell'ordine sul tuo WhatsApp. <span class="emphasis">Nessun trucco, nessuna sorpresa</span> — solo uno strumento semplice che ti fa risparmiare tempo e guadagnare di più.</p>
         </div>
-    </section>
-
-    <!-- A CHI SERVE -->
-    <section class="section section-dark">
-        <div class="section-inner reveal">
-            <h2 class="section-title">🎯 A Chi Serve Ordini-Lampo?</h2>
-            <p class="section-intro">Aiutiamo i ristoratori a servire meglio i clienti che vogliono ordinare <strong>facile, comodo, subito</strong>.</p>
-            
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="icon">🏃</div>
-                    <div><h4>Chi ha fretta</h4><p>Pausa pranzo corta, vuole ordinare in 30 secondi dal telefono</p></div>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🛋️</div>
-                    <div><h4>Chi vuole comodità</h4><p>Dal divano, senza telefonare, senza ripetere l'ordine tre volte</p></div>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">🔁</div>
-                    <div><h4>Chi già ti conosce</h4><p>Clienti abituali che vogliono un modo più semplice per ordinare</p></div>
-                </div>
-                <div class="trust-item">
-                    <div class="icon">✨</div>
-                    <div><h4>Chi ti scopre</h4><p>Nuovi clienti che vedono il QR e provano. Senza intermediari.</p></div>
-                </div>
-            </div>
-            
-            <div class="reflection-box reveal">
-                <p><strong>Non vogliamo "rubare" clienti a nessuno.</strong></p>
-                <p>Il nostro focus è <span style="color:var(--accent-green-light); font-weight:600;">fidelizzare</span> chi già ti sceglie e <span style="color:var(--accent-green-light); font-weight:600;">servirlo meglio</span>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- COSA TI OFFRIAMO -->
-    <section class="section reveal">
-        <h2 class="section-title">🎁 Cosa Ti Offriamo</h2>
-        <p class="section-intro">Un servizio <strong>semplice</strong>. Scegli tu quando usarlo, come usarlo.</p>
-        <div class="offer-grid">
-            <div class="offer-card">
-                <div class="offer-number">1</div>
-                <h3>🎨 Kit Lancio Completo</h3>
-                <p>Ti forniamo <span style="color:var(--accent-green-light);">QR personalizzato con il tuo logo</span>, espositore da banco e grafiche pronte. Tu esponi, i clienti ordinano.</p>
-            </div>
-            <div class="offer-card">
-                <div class="offer-number">2</div>
-                <h3>📱 Tu Decidi Cosa Offrire</h3>
-                <p>Solo <span style="color:var(--accent-green-light);">asporto</span>? Solo asporto. Anche <span style="color:var(--accent-green-light);">consegna</span>? Attivi con un tocco. <strong>Tu comandi, l'app obbedisce.</strong></p>
-            </div>
-            <div class="offer-card">
-                <div class="offer-number">3</div>
-                <h3>📝 Ordini Chiari</h3>
-                <p>Ricevi l'ordine scritto, diviso in <span style="color:var(--accent-green-light);">4 sezioni distinte</span>: composizione, indirizzo, orario, note. Niente più "Scusa, puoi ripetere?"</p>
-            </div>
-            <div class="offer-card">
-                <div class="offer-number">4</div>
-                <h3>💰 Incasso Immediato</h3>
-                <p>Il cliente paga <span style="color:var(--accent-green-light);">al momento dell'ordine</span>. Tu incassi subito, consegni dopo. Zero "ho dimenticato il portafoglio".</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CICLO FREEDOM -->
-    <section class="section reveal">
-        <h2 class="section-title">🏦 Il Ciclo FREEDOM</h2>
-        <p class="section-intro">Lavora libero tutta la settimana. Paga solo il venerdì.</p>
         
-        <div class="cycle-box">
-            <h3 style="font-size:1.5rem; margin-bottom:25px; color:var(--text-white);">📅 Il Ciclo: Venerdì → Giovedì</h3>
-            <div class="cycle-visual">
-                <div class="cycle-day billing"><div class="day-name">VEN</div><div class="day-num">💳</div></div>
-                <div class="cycle-day active"><div class="day-name">SAB</div><div class="day-num">📱</div></div>
-                <div class="cycle-day active"><div class="day-name">DOM</div><div class="day-num">📱</div></div>
-                <div class="cycle-day active"><div class="day-name">LUN</div><div class="day-num">📱</div></div>
-                <div class="cycle-day active"><div class="day-name">MAR</div><div class="day-num">📱</div></div>
-                <div class="cycle-day active"><div class="day-name">MER</div><div class="day-num">📱</div></div>
-                <div class="cycle-day"><div class="day-name">GIO</div><div class="day-num">📊</div></div>
+        <div class="video-cta-group">
+            <a href="https://wa.me/393896382394?text=Ciao!%20Ho%20visto%20il%20video%20e%20vorrei%20saperne%20di%20più." class="video-cta-primary">💬 Parliamone su WhatsApp</a>
+            <a href="#come-funziona" class="video-cta-secondary" onclick="document.querySelector('.thirty-seconds').scrollIntoView({behavior: 'smooth'})">📖 Leggi come funziona</a>
+        </div>
+    </div>
+</section>
+
+<section class="section reveal">
+    <div class="thirty-seconds">
+        <h2 style="font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 40px;">⏱️ Come Funziona (30 secondi)</h2>
+        <div class="thirty-steps">
+            <div class="thirty-step">
+                <div class="number">1</div>
+                <div class="text">I tuoi clienti ordinano dal <strong>QR code</strong>.<br>Tu incassi subito da loro.</div>
             </div>
-            <div class="cycle-legend" style="color: var(--text-muted); font-size: 0.95rem;">
-                <p style="margin-bottom:5px;">📱 <strong>Sab-Mer</strong> = Lavori e incassi dai clienti</p>
-                <p style="margin-bottom:5px;">📊 <strong>Giovedì</strong> = Ricevi riepilogo ordini su WhatsApp</p>
-                <p>💳 <strong>Venerdì</strong> = Addebito automatico (€1,20 × ordini)</p>
+            <div class="thirty-step">
+                <div class="number">2</div>
+                <div class="text">Lavori tutta la settimana.<br><strong>Senza pensieri.</strong></div>
+            </div>
+            <div class="thirty-step">
+                <div class="number">3</div>
+                <div class="text">Venerdì paghi solo gli ordini ricevuti.<br><strong>€1,20 l'uno.</strong> Fine.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="demo-box reveal">
+        <h3>📱 Prova Tu Stesso</h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Scansiona il QR o clicca il link per vedere come ordinano i tuoi clienti.</p>
+        <div class="demo-qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://ordinlampo.netlify.app/?r=demo-ordinilampo" alt="QR Code Demo">
+        </div>
+        <br>
+        <a href="https://ordinlampo.netlify.app/?r=demo-ordinilampo" target="_blank" class="demo-link">🔗 Apri la Demo</a>
+        <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.7;">Demo gratuita • Nessuna registrazione richiesta</p>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="section-inner reveal">
+        <h2 class="section-title">🎯 A Chi Serve Ordini-Lampo?</h2>
+        <p class="section-intro">Aiutiamo i ristoratori a servire meglio i clienti che vogliono ordinare <strong>facile, comodo, subito</strong>.</p>
+        
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="icon">🏃</div>
+                <div><h4>Chi ha fretta</h4><p>Pausa pranzo corta, vuole ordinare in 30 secondi dal telefono</p></div>
+            </div>
+            <div class="trust-item">
+                <div class="icon">🛋️</div>
+                <div><h4>Chi vuole comodità</h4><p>Dal divano, senza telefonare, senza ripetere l'ordine tre volte</p></div>
+            </div>
+            <div class="trust-item">
+                <div class="icon">🔁</div>
+                <div><h4>Chi già ti conosce</h4><p>Clienti abituali che vogliono un modo più semplice per ordinare</p></div>
+            </div>
+            <div class="trust-item">
+                <div class="icon">✨</div>
+                <div><h4>Chi ti scopre</h4><p>Nuovi clienti che vedono il QR e provano. Senza intermediari.</p></div>
             </div>
         </div>
         
         <div class="reflection-box reveal">
-            <h3>🤝 Ti Finanziamo Noi. Tu Incassi Subito.</h3>
-            <p>1. Il cliente ordina → <span style="color:var(--accent-green-light); font-weight:600;">paga subito a te</span></p>
-            <p>2. Tu incassi → soldi sul tuo conto <span style="color:var(--accent-green-light); font-weight:600;">immediati</span></p>
-            <p>3. Noi aspettiamo → ti chiediamo il compenso solo <span style="color:var(--accent-green-light); font-weight:600;">il venerdì</span></p>
-            <p style="margin-top: 15px; font-size:1.1rem; color:#fff;">In pratica: <strong>ti stiamo finanziando.</strong></p>
+            <p><strong>Non vogliamo "rubare" clienti a nessuno.</strong></p>
+            <p>Il nostro focus è <span style="color:var(--accent-green-light); font-weight:600;">fidelizzare</span> chi già ti sceglie e <span style="color:var(--accent-green-light); font-weight:600;">servirlo meglio</span>.</p>
+            <p style="margin-top: 10px;">In più, con il passaparola incentivato, lavoriamo anche per <span style="color:var(--accent-green-light); font-weight:600;">portarti clienti nuovi</span> — investendo noi.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- INFLAZIONE -->
-    <section class="section reveal">
-        <div class="inflazione-box">
-            <h3>📈 L'Inflazione che Non Vedi</h3>
-            <p class="big-number">+23%</p>
-            <p style="margin-top: 10px;">Aumento medio dei costi per i ristoratori negli ultimi 3 anni.<br>Le commissioni delle piattaforme? <strong>Sempre uguali: 15-35%.</strong></p>
-            <p style="margin-top: 15px; color: var(--accent-green-light); font-weight: 600;">Con Ordini-Lampo risparmi dal primo ordine. Ogni ordine.</p>
+<section class="section reveal">
+    <h2 class="section-title">🎁 Cosa Ti Offriamo</h2>
+    <p class="section-intro">Un servizio <strong>semplice</strong>. Scegli tu quando usarlo, come usarlo.</p>
+    <div class="offer-grid">
+        <div class="offer-card">
+            <div class="offer-number">1</div>
+            <h3>🎨 Kit Lancio Completo</h3>
+            <p>Ti forniamo <span style="color:var(--accent-green-light);">QR personalizzato con il tuo logo</span>, espositore da banco e grafiche pronte. Tu esponi, i clienti ordinano.</p>
         </div>
-    </section>
-
-    <!-- CHI C'È DIETRO -->
-    <section class="section reveal">
-        <h2 class="section-title">👤 Chi c'è dietro</h2>
-        <div class="chi-siamo-box">
-            <div class="chi-siamo-avatar">P</div>
-            <div class="chi-siamo-text">
-                <h3>Paolo Pizzo</h3>
-                <p style="font-size: 1.05rem; color: var(--text-white); margin-bottom: 12px; font-weight: 500;">Fondatore di Ordini-Lampo</p>
-                <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">Dietro Ordini-Lampo ci sono io, Paolo. Ho passato <span style="color:var(--text-white); font-weight:600;">4 anni in strada come rider</span> per le grandi piattaforme. So come funzionano, da dentro.</p>
-                
-                <p style="margin-top: 15px; color: var(--text-muted);">Mi sono fatto sempre le stesse domande:</p>
-                <ul>
-                    <li>• Perché un ristorante deve cedere il <span style="color:var(--text-white); font-weight:600;">15–35%</span> di ogni ordine?</li>
-                    <li>• Perché il cliente paga commissioni e resta con tempi opachi e orari spesso sballati?</li>
-                    <li>• Perché, appena il piatto esce dalla cucina, il ristoratore perde controllo su qualità e consegna?</li>
-                </ul>
-                
-                <p style="margin-top: 15px; color: var(--text-muted);">Ordini-Lampo nasce da questo: <span style="color:var(--text-white); font-weight:600;">niente marketplace, niente percentuali sul fatturato</span>. Il ristorante gestisce preparazione e consegna, il cliente concorda un orario chiaro, io fornisco solo lo strumento.</p>
-                <p style="margin-top: 15px; font-size: 1.1rem; font-weight: 700; color: var(--accent-green-light);">Tu guadagni di più, il cliente riceve meglio, io guadagno il giusto se lo usi. Fine.</p>
-            </div>
+        <div class="offer-card">
+            <div class="offer-number">2</div>
+            <h3>📱 Tu Decidi Cosa Offrire</h3>
+            <p>Solo <span style="color:var(--accent-green-light);">asporto</span>? Solo asporto. Anche <span style="color:var(--accent-green-light);">consegna</span>? Attivi con un tocco. <strong>Tu comandi, l'app obbedisce.</strong></p>
         </div>
-    </section>
+        <div class="offer-card">
+            <div class="offer-number">3</div>
+            <h3>📝 Ordini Chiari</h3>
+            <p>Ricevi l'ordine scritto, diviso in <span style="color:var(--accent-green-light);">4 sezioni distinte</span>: composizione, indirizzo, orario, note. Niente più "Scusa, puoi ripetere?"</p>
+        </div>
+        <div class="offer-card">
+            <div class="offer-number">4</div>
+            <h3>💰 Incasso Immediato</h3>
+            <p>Il cliente paga <span style="color:var(--accent-green-light);">al momento dell'ordine</span>. Tu incassi subito, consegni dopo. Zero "ho dimenticato il portafoglio".</p>
+        </div>
+    </div>
+</section>
 
-    <!-- SEDIAMOCI SUL DIVANO - LA SEZIONE CHE SPIAZZA -->
-    <section class="divano-section reveal">
-        <div class="divano-inner">
-            <div class="divano-emoji">🛋️</div>
-            <h2 class="divano-title">Aspetta. Fermati un secondo.<br>Parliamo da imprenditori.</h2>
+<section class="section reveal">
+    <h2 class="section-title">👤 Chi c'è dietro</h2>
+    <div class="chi-siamo-box">
+        <div class="chi-siamo-avatar">P</div>
+        <div class="chi-siamo-text">
+            <h3>Paolo Pizzo</h3>
+            <p style="font-size: 1.05rem; color: var(--text-white); margin-bottom: 12px; font-weight: 500;">Fondatore di Ordini-Lampo</p>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">Dietro Ordini-Lampo ci sono io, Paolo. Ho passato <span style="color:var(--text-white); font-weight:600;">4 anni in strada come rider</span> per le grandi piattaforme. So come funzionano, da dentro.</p>
             
-            <div class="divano-text">
-                <p class="question">"€1,20 per ordine... e basta? Tutto qui? Nessuno sconto per chi lavora forte?"</p>
-                
-                <p>Se ti sei fatto questa domanda, <span class="highlight-line">sei esattamente il tipo di persona con cui voglio lavorare.</span></p>
-                
-                <p>Perché significa che ragioni. Che non ti accontenti. Che vuoi capire se dietro c'è sostanza o fumo.</p>
-                
-                <p>Allora ti dico come stanno le cose:</p>
-                
-                <p><strong>Sì, ci sono opzioni per chi lavora forte.</strong><br>
-                Tariffe dedicate per chi fa volumi. Condizioni speciali per chi parte subito. Ma non le metto in vetrina come specchietti per le allodole.</p>
-                
-                <p class="question">"E allora come funziona?"</p>
-                
-                <p><span class="highlight-line">Ci sediamo — virtualmente — e ne parliamo.</span></p>
-                
-                <p>Tu mi dici quanti ordini fai, come lavori, cosa ti serve davvero. Io ti dico cosa posso offrirti e a quali condizioni. Senza giri di parole, senza "ti richiamo", senza PDF di 47 pagine.</p>
-                
-                <p>Una chiacchierata su WhatsApp. Due imprenditori che parlano di cose concrete.</p>
-                
-                <p style="margin-top: 25px;"><span class="highlight-line">Se sei quel tipo di ristoratore — quello che vuole capire prima di decidere — allora scrivimi.</span></p>
-            </div>
+            <p style="margin-top: 15px; color: var(--text-muted);">Ordini-Lampo nasce da una necessità: <span style="color:var(--text-white); font-weight:600;">niente marketplace, niente percentuali sul fatturato</span>. Il ristorante gestisce preparazione e consegna, il cliente concorda un orario chiaro, io fornisco solo lo strumento.</p>
+            <p style="margin-top: 15px; font-size: 1.1rem; font-weight: 700; color: var(--accent-green-light);">Tu guadagni di più, il cliente riceve meglio, io guadagno il giusto se lo usi. Fine.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEZIONE PARLIAMOCI CHIARO -->
+<section class="parliamochiaro-section reveal">
+    <div class="parliamochiaro-inner">
+        <div class="parliamochiaro-emoji">🤝</div>
+        <h2 class="parliamochiaro-title">Parliamoci Chiaro.<br>Faccia a Faccia. Senza Giri.</h2>
+        
+        <div class="parliamochiaro-text">
+            <p class="question-line">"€1,20 per ordine. Punto. Nessuno sconto per chi lavora forte?"</p>
             
-            <a href="https://wa.me/393896382394?text=Ciao%20Paolo!%20Vorrei%20capire%20meglio%20le%20opzioni%20per%20chi%20lavora%20forte.%20Possiamo%20parlarne?" class="divano-cta">🛋️ Sediamoci e parliamone</a>
-            <p class="divano-note">Niente venditori. Niente script. Solo io, Paolo.</p>
+            <p>Domanda giusta. <span class="highlight-line">Chi la fa è il tipo di imprenditore con cui voglio lavorare.</span></p>
+            
+            <p>Non perditempo. Non gente che chiede mille preventivi e poi sparisce. Gente che ragiona, decide, agisce.</p>
+            
+            <p style="margin-top: 25px;"><span class="strong-line">La risposta:</span></p>
+            
+            <p><span class="highlight-line">Sì. Ci sono condizioni migliori per chi fa volumi.</span><br>
+            Ma non le sbandiero in homepage. Non sono specchietti per allodole.</p>
+            
+            <p style="margin-top: 25px;"><span class="strong-line">Come funziona:</span></p>
+            
+            <p>Tu mi scrivi. Mi dici quanti ordini fai. Io ti dico cosa posso offrirti.<br>
+            <span class="highlight-line">Numeri sul tavolo. Niente fumo.</span></p>
+            
+            <p>5 minuti su WhatsApp. Due imprenditori che parlano di soldi veri, non di "sinergie" o "opportunità".</p>
+            
+            <p style="margin-top: 30px;" class="strong-line">Se perdi tempo, non scrivermi.<br>Se fai sul serio, clicca sotto.</p>
         </div>
-    </section>
+        
+        <a href="https://wa.me/393896382394?text=Ciao%20Paolo.%20Faccio%20circa%20[X]%20ordini%20a%20settimana.%20Che%20condizioni%20puoi%20farmi?" class="parliamochiaro-cta">🤝 Parliamoci Chiaro</a>
+        <p class="parliamochiaro-note">Niente venditori. Niente script. Solo io, Paolo. Rispondo entro 2 ore.</p>
+    </div>
+</section>
 
-    <!-- FAQ -->
-    <section class="section reveal">
-        <div class="faq-rapid">
-            <h3 style="text-align:center; font-size:1.6rem; margin-bottom:30px; color:var(--text-white);">🤔 Domande Frequenti</h3>
-            <div class="faq-item-rapid">
-                <div class="question">"Cos'è il METODO FREEDOM?"</div>
-                <div class="answer">→ Lavori libero, paghi il venerdì solo gli ordini ricevuti. €1,20 cad.</div>
-            </div>
-            <div class="faq-item-rapid">
-                <div class="question">"Devo pagare altro oltre agli ordini?"</div>
-                <div class="answer">→ No. Nessun abbonamento, nessun costo nascosto.</div>
-            </div>
-            <div class="faq-item-rapid">
-                <div class="question">"E se non mi piace?"</div>
-                <div class="answer">→ Salda gli ordini ricevuti e vai. Nessun vincolo.</div>
-            </div>
-            <div class="faq-item-rapid">
-                <div class="question">"Quanto tempo ci vuole per partire?"</div>
-                <div class="answer">→ Un giorno. Configuriamo tutto noi.</div>
-            </div>
-            <div class="faq-item-rapid">
-                <div class="question">"Ci sono sconti per chi fa tanti ordini?"</div>
-                <div class="answer">→ Sì. <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20sulle%20tariffe%20per%20volumi." style="color:var(--accent-orange-light);">Scrivimi</a> e ne parliamo.</div>
-            </div>
+<section class="section reveal">
+    <h2 class="section-title">🏦 Il Ciclo FREEDOM</h2>
+    <p class="section-intro">Lavora libero tutta la settimana. Paga solo il venerdì.</p>
+    
+    <div class="cycle-box">
+        <h3 style="font-size:1.5rem; margin-bottom:25px; color:var(--text-white);">📅 Il Ciclo: Venerdì → Giovedì</h3>
+        <div class="cycle-visual">
+            <div class="cycle-day billing"><div class="day-name">VEN</div><div class="day-num">💳</div></div>
+            <div class="cycle-day active"><div class="day-name">SAB</div><div class="day-num">📱</div></div>
+            <div class="cycle-day active"><div class="day-name">DOM</div><div class="day-num">📱</div></div>
+            <div class="cycle-day active"><div class="day-name">LUN</div><div class="day-num">📱</div></div>
+            <div class="cycle-day active"><div class="day-name">MAR</div><div class="day-num">📱</div></div>
+            <div class="cycle-day active"><div class="day-name">MER</div><div class="day-num">📱</div></div>
+            <div class="cycle-day"><div class="day-name">GIO</div><div class="day-num">📊</div></div>
         </div>
-    </section>
+        <div class="cycle-legend" style="color: var(--text-muted); font-size: 0.95rem;">
+            <p style="margin-bottom:5px;">📱 <strong>Sab-Mer</strong> = Lavori e incassi dai clienti</p>
+            <p style="margin-bottom:5px;">📊 <strong>Giovedì</strong> = Ricevi riepilogo ordini su WhatsApp</p>
+            <p>💳 <strong>Venerdì</strong> = Addebito automatico (€1,20 × ordini)</p>
+        </div>
+    </div>
+    
+    <div class="reflection-box reveal">
+        <h3>🤝 Ti Finanziamo Noi. Tu Incassi Subito.</h3>
+        <p>1. Il cliente ordina → <span style="color:var(--accent-green-light); font-weight:600;">paga subito a te</span></p>
+        <p>2. Tu incassi → soldi sul tuo conto <span style="color:var(--accent-green-light); font-weight:600;">immediati</span></p>
+        <p>3. Noi aspettiamo → ti chiediamo il compenso solo <span style="color:var(--accent-green-light); font-weight:600;">venerdì</span></p>
+        <p style="margin-top: 15px; font-size:1.1rem; color:#fff;">In pratica: <strong>ti stiamo finanziando.</strong></p>
+    </div>
+</section>
 
-    <!-- CTA FINALE -->
-    <section class="footer-cta reveal">
-        <h2 style="font-weight: 800; text-shadow: 0 5px 20px rgba(0,0,0,0.5);">Pronto a Lavorare Libero?</h2>
-        <p class="tagline" style="font-size:1.2rem; margin-bottom:30px; color:var(--text-muted);">METODO FREEDOM: €1,20 per ordine. Paghi solo il venerdì. Zero vincoli.</p>
-        <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
-        <div class="contact-info" style="margin-top:30px;">
-            <p>📧 <a href="mailto:ordini-lampo@proton.me" style="color: var(--accent-green-light);">ordini-lampo@proton.me</a></p>
-        </div>
-    </section>
-</main>
+<section class="section reveal">
+    <div class="faq-rapid">
+        <h3 style="text-align:center; font-size:1.6rem; margin-bottom:30px; color:var(--text-white);">🤔 Domande Frequenti</h3>
+        <div class="faq-item-rapid"><div class="question">"Cos'è il METODO FREEDOM?"</div><div class="answer">→ Lavori libero, paghi il venerdì solo gli ordini ricevuti. €1,20 cad.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Devo pagare altro oltre agli ordini?"</div><div class="answer">→ No. Nessun abbonamento, nessun costo nascosto.</div></div>
+        <div class="faq-item-rapid"><div class="question">"E se non mi piace?"</div><div class="answer">→ Salda gli ordini ricevuti e vai. Nessun vincolo.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Quanto tempo ci vuole per partire?"</div><div class="answer">→ Un giorno. Configuriamo tutto noi.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Chi altro lo usa?"</div><div class="answer">→ Stiamo partendo in Liguria. Sei tra i primi!</div></div>
+        <div class="faq-item-rapid"><div class="question">"Ci sono sconti per chi fa volumi?"</div><div class="answer">→ Sì. <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20sulle%20tariffe%20per%20volumi." style="color:var(--accent-orange-light);">Scrivimi</a> e ne parliamo.</div></div>
+    </div>
+</section>
+
+<section class="footer-cta reveal">
+    <h2 style="font-weight: 800; text-shadow: 0 5px 20px rgba(0,0,0,0.5);">Pronto a Lavorare Libero?</h2>
+    <p class="tagline" style="font-size:1.2rem; margin-bottom:30px; color:var(--text-muted);">METODO FREEDOM: €1,20 per ordine. Paghi solo il venerdì. Zero vincoli.</p>
+    <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20Ordini-Lampo%20per%20il%20mio%20ristorante." class="cta-button">💬 Scrivici su WhatsApp</a>
+    <div class="contact-info" style="margin-top:30px;">
+        <p>📧 <a href="mailto:ordini-lampo@proton.me" style="color: var(--accent-green-light);">ordini-lampo@proton.me</a></p>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="footer-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/cookie-policy.html">Cookie Policy</a>
+        <a href="/privacy-policy.html">Privacy Policy</a> · 
+        <a href="/cookie-policy.html">Cookie Policy</a> · 
         <a href="/termini-servizio.html">Termini di Servizio</a>
     </div>
     <p style="margin-top:10px;">© 2025 Ordini-Lampo. Tutti i diritti riservati.</p>
@@ -870,7 +892,9 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = { threshold: 0.1 };
+        const observerOptions = {
+            threshold: 0.1
+        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

@@ -4,198 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Policy | Ordini-Lampo</title>
+    <meta name="description" content="Informativa sui cookie di Ordini-Lampo. Quali cookie utilizziamo e perché.">
+    <link rel="canonical" href="https://ordini-lampo.it/cookie-policy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-dark: #1a1a2e;
-            --bg-card: #2a2a4e;
-            --accent: #22c55e;
-            --text: #ffffff;
-            --text-muted: #a1a1aa;
+            --gradient-start: #1a1a2e;
+            --gradient-mid: #4a1942;
+            --gradient-end: #8b2f5f;
+            --accent-green: #22c55e;
+            --accent-green-light: #4ade80;
+            --accent-orange: #F59E0B;
+            --text-white: #ffffff;
+            --text-muted: #d1d5db;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            color: var(--text-white);
             line-height: 1.8;
             font-size: 16px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
-        .container { max-width: 900px; margin: 0 auto; }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-green-light);
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
         h1 {
             font-size: 2.5rem;
-            color: var(--accent);
+            font-weight: 700;
             margin-bottom: 10px;
+            color: var(--accent-green-light);
         }
+
         .last-update {
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 40px;
         }
+
         h2 {
             font-size: 1.4rem;
-            color: var(--accent);
+            font-weight: 600;
             margin-top: 40px;
             margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+            color: var(--accent-green-light);
         }
-        p { margin-bottom: 15px; }
-        ul { margin-left: 25px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .highlight-box {
-            background: var(--bg-card);
-            border-left: 4px solid var(--accent);
-            padding: 20px;
-            margin: 20px 0;
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--text-white);
+        }
+
+        p, ul, ol {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--accent-green-light);
+        }
+
+        .highlight {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 3px solid var(--accent-green);
+            padding: 15px 20px;
             border-radius: 0 10px 10px 0;
+            margin: 20px 0;
         }
+
         .cookie-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        .cookie-table th, .cookie-table td {
+
+        .cookie-table th,
+        .cookie-table td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+
         .cookie-table th {
-            background: var(--bg-card);
-            color: var(--accent);
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--text-white);
+            font-weight: 600;
         }
+
+        .cookie-table td {
+            color: var(--text-muted);
+        }
+
         .badge {
             display: inline-block;
             padding: 3px 10px;
             border-radius: 12px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 500;
         }
-        .badge-green { background: rgba(34, 197, 94, 0.2); color: var(--accent); }
-        .badge-yellow { background: rgba(234, 179, 8, 0.2); color: #eab308; }
-        a { color: var(--accent); }
-        .back-link {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
-            background: var(--accent);
-            color: var(--bg-dark);
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
+
+        .badge-green {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--accent-green-light);
         }
-        .back-link:hover { opacity: 0.9; }
-        .no-cookie-box {
-            background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.05));
-            border: 2px solid var(--accent);
-            border-radius: 15px;
-            padding: 30px;
+
+        .badge-orange {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-orange);
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
             text-align: center;
-            margin: 30px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
-        .no-cookie-box .icon { font-size: 3rem; margin-bottom: 15px; }
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .cookie-table { font-size: 0.85rem; }
-            .cookie-table th, .cookie-table td { padding: 8px; }
+
+        @media (max-width: 600px) {
+            .cookie-table {
+                font-size: 0.85rem;
+            }
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px 10px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>ðŸª Cookie Policy</h1>
-    <p class="last-update">Ultimo aggiornamento: 8 Dicembre 2025</p>
+    <a href="/" class="back-link">← Torna alla Home</a>
+    
+    <h1>Cookie Policy</h1>
+    <p class="last-update">Ultimo aggiornamento: 10 dicembre 2025</p>
 
-    <div class="no-cookie-box">
-        <div class="icon">âœ…</div>
-        <h3>Buone notizie!</h3>
-        <p>Questo sito utilizza <strong>solo cookie tecnici</strong> strettamente necessari.<br>
-        Non utilizziamo cookie di profilazione nÃ© cookie pubblicitari.</p>
+    <div class="highlight">
+        <strong>In breve:</strong> Usiamo solo cookie tecnici necessari al funzionamento del sito. Non usiamo cookie di profilazione o pubblicitari.
     </div>
 
-    <h2>1. Cosa Sono i Cookie</h2>
-    <p>I cookie sono piccoli file di testo che i siti web salvano sul tuo dispositivo (computer, smartphone, tablet) quando li visiti. Servono a far funzionare i siti web in modo piÃ¹ efficiente e a fornire informazioni ai proprietari del sito.</p>
+    <h2>1. Cosa sono i Cookie</h2>
+    <p>I cookie sono piccoli file di testo che i siti web salvano sul tuo dispositivo (computer, smartphone, tablet) quando li visiti. Servono a far funzionare il sito correttamente e a migliorare la tua esperienza.</p>
 
-    <h2>2. Cookie Che Utilizziamo</h2>
-    <p>Ordini-Lampo utilizza esclusivamente <strong>cookie tecnici</strong>, ovvero cookie necessari per il funzionamento del sito. Non richiedono il tuo consenso preventivo (ai sensi dell'Art. 122 del Codice Privacy e del Provvedimento del Garante dell'8 maggio 2014).</p>
-
+    <h2>2. Cookie che Utilizziamo</h2>
+    
+    <h3>Cookie Tecnici (Necessari)</h3>
+    <p>Questi cookie sono essenziali per il funzionamento del sito. Non richiedono il tuo consenso.</p>
+    
     <table class="cookie-table">
-        <tr>
-            <th>Nome Cookie</th>
-            <th>Tipo</th>
-            <th>FinalitÃ </th>
-            <th>Durata</th>
-        </tr>
-        <tr>
-            <td><code>sb-*-auth-token</code></td>
-            <td><span class="badge badge-green">Tecnico</span></td>
-            <td>Autenticazione utente (Supabase)</td>
-            <td>Sessione / 7 giorni</td>
-        </tr>
-        <tr>
-            <td><code>stripe.csrf</code></td>
-            <td><span class="badge badge-green">Tecnico</span></td>
-            <td>Sicurezza pagamenti (Stripe)</td>
-            <td>Sessione</td>
-        </tr>
-        <tr>
-            <td><code>__stripe_mid</code></td>
-            <td><span class="badge badge-green">Tecnico</span></td>
-            <td>Prevenzione frodi (Stripe)</td>
-            <td>1 anno</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Fornitore</th>
+                <th>Scopo</th>
+                <th>Durata</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>__cfruid</td>
+                <td>Cloudflare</td>
+                <td>Sicurezza e protezione DDoS</td>
+                <td>Sessione</td>
+            </tr>
+            <tr>
+                <td>_cf_bm</td>
+                <td>Cloudflare</td>
+                <td>Gestione del traffico bot</td>
+                <td>30 minuti</td>
+            </tr>
+        </tbody>
     </table>
 
-    <div class="highlight-box">
-        <p><strong>âš ï¸ Cookie che NON utilizziamo:</strong></p>
-        <ul>
-            <li>âŒ Google Analytics o altri strumenti di tracciamento</li>
-            <li>âŒ Cookie pubblicitari (Facebook Pixel, Google Ads, ecc.)</li>
-            <li>âŒ Cookie di profilazione</li>
-            <li>âŒ Cookie di social media (pulsanti Like, Share, ecc.)</li>
-        </ul>
-    </div>
+    <h3>Cookie di Analisi (Opzionali)</h3>
+    <p>Al momento <strong>non utilizziamo</strong> cookie di analisi o tracciamento come Google Analytics. Se in futuro decidessimo di implementarli, aggiorneremo questa policy e richiederemo il tuo consenso.</p>
 
-    <h2>3. Cookie di Terze Parti</h2>
-    <p>I cookie tecnici di Stripe sono necessari per elaborare i pagamenti in modo sicuro. Stripe Ã¨ il nostro fornitore di servizi di pagamento e utilizza cookie per:</p>
+    <h3>Cookie di Terze Parti</h3>
+    <p>I nostri fornitori di servizi potrebbero impostare cookie quando utilizzi le loro funzionalità:</p>
+    
+    <table class="cookie-table">
+        <thead>
+            <tr>
+                <th>Servizio</th>
+                <th>Scopo</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stripe</td>
+                <td>Elaborazione pagamenti sicuri</td>
+                <td><span class="badge badge-green">Necessario</span></td>
+            </tr>
+            <tr>
+                <td>Supabase</td>
+                <td>Autenticazione e database</td>
+                <td><span class="badge badge-green">Necessario</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Come Gestire i Cookie</h2>
+    <p>Puoi controllare e gestire i cookie attraverso le impostazioni del tuo browser:</p>
     <ul>
-        <li>Prevenire le frodi</li>
-        <li>Ricordare le preferenze di pagamento</li>
-        <li>Garantire la sicurezza delle transazioni</li>
+        <li><strong>Chrome:</strong> Impostazioni → Privacy e sicurezza → Cookie</li>
+        <li><strong>Firefox:</strong> Opzioni → Privacy e sicurezza → Cookie</li>
+        <li><strong>Safari:</strong> Preferenze → Privacy → Cookie</li>
+        <li><strong>Edge:</strong> Impostazioni → Privacy → Cookie</li>
     </ul>
-    <p>Per maggiori informazioni sui cookie di Stripe, consulta la loro <a href="https://stripe.com/it/privacy" target="_blank">Privacy Policy</a>.</p>
+    <p><strong>Nota:</strong> Disabilitare i cookie tecnici potrebbe compromettere il funzionamento del sito.</p>
 
-    <h2>4. Come Gestire i Cookie</h2>
-    <p>Puoi gestire le preferenze sui cookie direttamente dal tuo browser. Ecco come fare:</p>
+    <h2>4. Cookie e App di Ordinazione</h2>
+    <p>L'app di ordinazione Ordini-Lampo (quella che usano i clienti del ristorante) utilizza:</p>
     <ul>
-        <li><strong>Chrome:</strong> Impostazioni â†’ Privacy e sicurezza â†’ Cookie</li>
-        <li><strong>Firefox:</strong> Impostazioni â†’ Privacy e sicurezza â†’ Cookie</li>
-        <li><strong>Safari:</strong> Preferenze â†’ Privacy â†’ Cookie</li>
-        <li><strong>Edge:</strong> Impostazioni â†’ Cookie e autorizzazioni sito</li>
+        <li><strong>localStorage:</strong> per salvare temporaneamente i dati dell'ordine in corso</li>
+        <li><strong>sessionStorage:</strong> per mantenere la sessione attiva durante l'ordine</li>
     </ul>
-
-    <div class="highlight-box">
-        <p><strong>âš ï¸ Attenzione:</strong> Se disabiliti i cookie tecnici, alcune funzionalitÃ  del sito potrebbero non funzionare correttamente (es. login, pagamenti).</p>
-    </div>
+    <p>Questi dati rimangono sul dispositivo dell'utente e vengono cancellati alla chiusura del browser o al completamento dell'ordine.</p>
 
     <h2>5. Aggiornamenti</h2>
-    <p>Questa Cookie Policy puÃ² essere aggiornata periodicamente. L'ultima data di aggiornamento Ã¨ indicata in cima alla pagina.</p>
+    <p>Questa Cookie Policy potrebbe essere aggiornata periodicamente. Ti invitiamo a consultarla regolarmente. La data dell'ultimo aggiornamento è indicata in cima alla pagina.</p>
 
     <h2>6. Contatti</h2>
-    <p>Per domande sulla nostra Cookie Policy:</p>
-    <p>ðŸ“§ <a href="mailto:ordini-lampo@proton.me">ordini-lampo@proton.me</a></p>
+    <p>Per domande sui cookie:</p>
+    <p>Email: <a href="mailto:ordini-lampo@proton.me">ordini-lampo@proton.me</a><br>
+    WhatsApp: <a href="https://wa.me/393896382394">+39 389 638 2394</a></p>
 
-    <h2>7. Riferimenti Normativi</h2>
+    <h2>7. Link Utili</h2>
     <ul>
-        <li>Regolamento UE 2016/679 (GDPR)</li>
-        <li>D.Lgs. 196/2003 (Codice Privacy) come modificato dal D.Lgs. 101/2018</li>
-        <li>Provvedimento del Garante Privacy dell'8 maggio 2014</li>
-        <li>Linee Guida del Garante Privacy del 10 giugno 2021</li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/termini-servizio.html">Termini di Servizio</a></li>
+        <li><a href="https://www.garanteprivacy.it/cookie" target="_blank" rel="noopener noreferrer">Garante Privacy - Informazioni sui Cookie</a></li>
     </ul>
 
-    <a href="/" class="back-link">â† Torna alla Home</a>
+    <div class="footer">
+        <p><a href="/">← Torna alla Home</a></p>
+        <p style="margin-top: 15px;">© 2025 Ordini-Lampo. Tutti i diritti riservati.</p>
+    </div>
 </div>
 
 </body>

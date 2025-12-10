@@ -4,294 +4,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termini di Servizio | Ordini-Lampo</title>
+    <meta name="description" content="Termini e condizioni di utilizzo del servizio Ordini-Lampo per ristoranti.">
+    <link rel="canonical" href="https://ordini-lampo.it/termini-servizio.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-dark: #1a1a2e;
-            --bg-card: #2a2a4e;
-            --accent: #22c55e;
-            --text: #ffffff;
-            --text-muted: #a1a1aa;
+            --gradient-start: #1a1a2e;
+            --gradient-mid: #4a1942;
+            --gradient-end: #8b2f5f;
+            --accent-green: #22c55e;
+            --accent-green-light: #4ade80;
+            --accent-orange: #F59E0B;
+            --text-white: #ffffff;
+            --text-muted: #d1d5db;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            color: var(--text-white);
             line-height: 1.8;
             font-size: 16px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
-        .container { max-width: 900px; margin: 0 auto; }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-green-light);
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
         h1 {
             font-size: 2.5rem;
-            color: var(--accent);
+            font-weight: 700;
             margin-bottom: 10px;
+            color: var(--accent-green-light);
         }
+
         .last-update {
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 40px;
         }
+
         h2 {
             font-size: 1.4rem;
-            color: var(--accent);
+            font-weight: 600;
             margin-top: 40px;
             margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+            color: var(--accent-green-light);
         }
+
         h3 {
             font-size: 1.1rem;
+            font-weight: 600;
             margin-top: 25px;
             margin-bottom: 10px;
+            color: var(--text-white);
         }
-        p { margin-bottom: 15px; }
-        ul, ol { margin-left: 25px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .highlight-box {
-            background: var(--bg-card);
-            border-left: 4px solid var(--accent);
-            padding: 20px;
-            margin: 20px 0;
+
+        p, ul, ol {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--accent-green-light);
+        }
+
+        .highlight {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 3px solid var(--accent-green);
+            padding: 15px 20px;
             border-radius: 0 10px 10px 0;
-        }
-        .warning-box {
-            background: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid #ef4444;
-            padding: 20px;
             margin: 20px 0;
+        }
+
+        .highlight-orange {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 3px solid var(--accent-orange);
+            padding: 15px 20px;
             border-radius: 0 10px 10px 0;
-        }
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
             margin: 20px 0;
         }
-        .price-table th, .price-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .price-table th {
-            background: var(--bg-card);
-            color: var(--accent);
-        }
-        .contact-box {
-            background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.05));
-            border: 1px solid var(--accent);
+
+        .price-box {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 15px;
             padding: 25px;
-            margin: 30px 0;
+            margin: 20px 0;
         }
-        a { color: var(--accent); }
-        .back-link {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
-            background: var(--accent);
-            color: var(--bg-dark);
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
+
+        .price-box h3 {
+            margin-top: 0;
+            color: var(--accent-green-light);
         }
-        .back-link:hover { opacity: 0.9; }
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .price-table { font-size: 0.85rem; }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>ðŸ“‹ Termini di Servizio</h1>
-    <p class="last-update">Ultimo aggiornamento: 8 Dicembre 2025</p>
+    <a href="/" class="back-link">← Torna alla Home</a>
+    
+    <h1>Termini di Servizio</h1>
+    <p class="last-update">Ultimo aggiornamento: 10 dicembre 2025</p>
 
-    <div class="highlight-box">
-        <p><strong>In breve:</strong> Ordini-Lampo Ã¨ un servizio di gestione ordini per ristoranti. Paghi solo per gli ordini ricevuti (â‚¬0,98 ciascuno). Nessun abbonamento, nessun vincolo. Puoi recedere in qualsiasi momento saldando i crediti utilizzati.</p>
+    <div class="highlight">
+        <strong>In breve:</strong> Usi il servizio, paghi solo gli ordini ricevuti. Nessun vincolo, nessun abbonamento. Puoi smettere quando vuoi.
     </div>
 
     <h2>1. Definizioni</h2>
     <ul>
-        <li><strong>"Servizio"</strong>: la piattaforma Ordini-Lampo per la gestione degli ordini</li>
-        <li><strong>"Titolare"</strong>: Pizzo Paolo, P.IVA 01738420080</li>
-        <li><strong>"Ristoratore" o "Cliente B2B"</strong>: l'attivitÃ  commerciale che utilizza il Servizio</li>
-        <li><strong>"Cliente Finale"</strong>: l'utente che effettua ordini tramite il Servizio</li>
-        <li><strong>"Credito" o "CRO"</strong>: unitÃ  di misura del servizio (1 CRO = 1 ordine ricevuto)</li>
-        <li><strong>"Fido"</strong>: crediti anticipati dal Titolare al Ristoratore</li>
-        <li><strong>"Pannello Admin"</strong>: l'interfaccia di gestione riservata al Ristoratore</li>
+        <li><strong>"Servizio"</strong>: la piattaforma Ordini-Lampo per la ricezione di ordini tramite QR code</li>
+        <li><strong>"Fornitore"</strong>: Paolo Pizzo, titolare di Ordini-Lampo</li>
+        <li><strong>"Cliente" o "Ristoratore"</strong>: l'attività di ristorazione che utilizza il Servizio</li>
+        <li><strong>"Utente Finale"</strong>: il cliente del ristorante che effettua un ordine</li>
+        <li><strong>"METODO FREEDOM"</strong>: il modello di pagamento a consumo senza abbonamento</li>
     </ul>
 
     <h2>2. Oggetto del Servizio</h2>
-    <p>Ordini-Lampo fornisce ai ristoratori:</p>
+    <p>Ordini-Lampo fornisce:</p>
     <ul>
-        <li>Una piattaforma per ricevere ordini dai clienti finali</li>
-        <li>Un QR code personalizzato con il logo del locale</li>
-        <li>Un pannello di gestione per visualizzare e gestire gli ordini</li>
-        <li>Integrazione con sistemi di pagamento (Stripe)</li>
-        <li>Notifiche in tempo reale degli ordini ricevuti</li>
+        <li>Una piattaforma web per la ricezione di ordini di asporto e/o consegna</li>
+        <li>Un QR code personalizzato con il logo del ristorante</li>
+        <li>La trasmissione degli ordini via WhatsApp</li>
+        <li>Un pannello di amministrazione per la gestione del menu</li>
+        <li>Supporto tecnico via WhatsApp</li>
     </ul>
 
-    <h2>3. Requisiti per l'Utilizzo</h2>
-    <p>Per utilizzare il Servizio, il Ristoratore deve:</p>
-    <ul>
-        <li>Essere titolare di un'attivitÃ  commerciale regolarmente registrata</li>
-        <li>Possedere Partita IVA italiana attiva</li>
-        <li>Disporre di una carta di pagamento valida per gli addebiti</li>
-        <li>Accettare i presenti Termini di Servizio</li>
-    </ul>
-
-    <h2>4. Sistema dei Crediti e Prezzi</h2>
+    <h2>3. Tariffe e Pagamenti</h2>
     
-    <h3>4.1 Costo del Servizio</h3>
-    <table class="price-table">
-        <tr>
-            <th>Voce</th>
-            <th>Costo</th>
-        </tr>
-        <tr>
-            <td>Costo per ordine ricevuto</td>
-            <td><strong>â‚¬0,98</strong> (IVA inclusa ove applicabile)</td>
-        </tr>
-        <tr>
-            <td>Abbonamento mensile</td>
-            <td><strong>â‚¬0</strong> (non previsto)</td>
-        </tr>
-        <tr>
-            <td>Costi di attivazione</td>
-            <td><strong>â‚¬0</strong> (gratuita)</td>
-        </tr>
-        <tr>
-            <td>Crediti omaggio di benvenuto</td>
-            <td><strong>10 CRO</strong> (una tantum)</td>
-        </tr>
-    </table>
-
-    <h3>4.2 Sistema del Fido Settimanale</h3>
-    <p>Il Servizio funziona con un sistema di "fido settimanale":</p>
-    <ul>
-        <li>Ogni venerdÃ¬, il Ristoratore riceve 30 crediti (CRO) anticipati</li>
-        <li>Ogni ordine ricevuto consuma 1 credito</li>
-        <li>Il venerdÃ¬ successivo viene addebitato l'importo dei crediti utilizzati</li>
-        <li>L'addebito avviene automaticamente sulla carta registrata</li>
-    </ul>
-
-    <h3>4.3 Pacchetti Prepagati (opzionali)</h3>
-    <p>In alternativa al fido settimanale, il Ristoratore puÃ² acquistare pacchetti prepagati a prezzo scontato. I dettagli dei pacchetti sono disponibili nel Pannello Admin.</p>
-
-    <h2>5. Pagamenti</h2>
-
-    <h3>5.1 ModalitÃ  di Pagamento</h3>
-    <ul>
-        <li>Gli addebiti avvengono tramite Stripe</li>
-        <li>Ãˆ richiesta una carta di credito o debito valida</li>
-        <li>Gli addebiti del fido avvengono automaticamente ogni venerdÃ¬</li>
-        <li>In caso di mancato pagamento, il Servizio viene sospeso dopo 48 ore</li>
-    </ul>
-
-    <h3>5.2 Fatturazione</h3>
-    <p>Le fatture vengono emesse mensilmente in formato elettronico e inviate al Sistema di Interscambio (SDI) secondo la normativa vigente.</p>
-
-    <h3>5.3 Incasso Clienti Finali</h3>
-    <div class="highlight-box">
-        <p><strong>Importante:</strong> I pagamenti dei clienti finali vanno direttamente al Ristoratore tramite Stripe. Ordini-Lampo non funge da intermediario finanziario e non trattiene somme destinate al Ristoratore.</p>
+    <div class="price-box">
+        <h3>METODO FREEDOM (Tariffa Standard)</h3>
+        <p><strong>Costo per ordine:</strong> €1,20 (IVA inclusa)</p>
+        <p><strong>Abbonamento:</strong> Nessuno</p>
+        <p><strong>Costi di attivazione:</strong> Nessuno</p>
+        <p><strong>Vincoli contrattuali:</strong> Nessuno</p>
     </div>
 
-    <h2>6. Obblighi del Ristoratore</h2>
+    <h3>3.1 Ciclo di Fatturazione</h3>
+    <p>Il ciclo di fatturazione segue il "Ciclo Freedom":</p>
+    <ul>
+        <li><strong>Periodo di riferimento:</strong> da venerdì a giovedì</li>
+        <li><strong>Riepilogo ordini:</strong> inviato ogni giovedì via WhatsApp</li>
+        <li><strong>Addebito:</strong> ogni venerdì tramite carta di credito/debito registrata</li>
+    </ul>
+
+    <h3>3.2 Metodi di Pagamento</h3>
+    <p>I pagamenti vengono elaborati tramite Stripe. Accettiamo:</p>
+    <ul>
+        <li>Carte di credito (Visa, Mastercard, American Express)</li>
+        <li>Carte di debito</li>
+        <li>Addebito diretto SEPA (su richiesta)</li>
+    </ul>
+
+    <h3>3.3 Mancato Pagamento</h3>
+    <p>In caso di mancato pagamento:</p>
+    <ol>
+        <li>Primo tentativo fallito: notifica via WhatsApp</li>
+        <li>Secondo tentativo dopo 3 giorni</li>
+        <li>Sospensione del servizio dopo 7 giorni</li>
+        <li>Riattivazione immediata al saldo del dovuto</li>
+    </ol>
+
+    <h2>4. Obblighi del Ristoratore</h2>
     <p>Il Ristoratore si impegna a:</p>
     <ul>
-        <li>Fornire informazioni veritiere e aggiornate</li>
-        <li>Mantenere un metodo di pagamento valido</li>
-        <li>Rispettare le normative igienico-sanitarie (HACCP)</li>
+        <li>Fornire informazioni veritiere sul proprio esercizio</li>
+        <li>Mantenere aggiornato il menu e i prezzi</li>
         <li>Evadere gli ordini ricevuti in modo tempestivo</li>
-        <li>Non utilizzare il Servizio per attivitÃ  illegali</li>
-        <li>Saldare i crediti utilizzati secondo le scadenze previste</li>
+        <li>Rispettare le normative igienico-sanitarie vigenti</li>
+        <li>Gestire eventuali reclami dei propri clienti</li>
+        <li>Mantenere valido il metodo di pagamento registrato</li>
     </ul>
 
-    <h2>7. Obblighi del Titolare</h2>
-    <p>Il Titolare si impegna a:</p>
+    <h2>5. Obblighi del Fornitore</h2>
+    <p>Ordini-Lampo si impegna a:</p>
     <ul>
-        <li>Garantire la disponibilitÃ  del Servizio (uptime 99.9%)</li>
-        <li>Fornire assistenza via WhatsApp in orario lavorativo</li>
-        <li>Proteggere i dati secondo la normativa GDPR</li>
-        <li>Notificare eventuali modifiche ai Termini con 30 giorni di preavviso</li>
+        <li>Garantire la disponibilità del servizio (uptime 99%)</li>
+        <li>Trasmettere gli ordini in tempo reale via WhatsApp</li>
+        <li>Fornire supporto tecnico in orario lavorativo</li>
+        <li>Proteggere i dati secondo il GDPR</li>
+        <li>Comunicare tempestivamente eventuali disservizi</li>
     </ul>
 
-    <h2>8. Limitazione di ResponsabilitÃ </h2>
-    <p>Il Titolare non Ã¨ responsabile per:</p>
-    <ul>
-        <li>Danni derivanti da interruzioni del servizio per cause di forza maggiore</li>
-        <li>Contenuti inseriti dal Ristoratore (menu, prezzi, descrizioni)</li>
-        <li>QualitÃ , sicurezza o consegna dei prodotti alimentari</li>
-        <li>Controversie tra Ristoratore e Cliente Finale</li>
-        <li>Danni indiretti o consequenziali</li>
-    </ul>
-
-    <div class="warning-box">
-        <p><strong>âš ï¸ Limite di responsabilitÃ :</strong> In ogni caso, la responsabilitÃ  del Titolare Ã¨ limitata all'importo pagato dal Ristoratore negli ultimi 12 mesi.</p>
+    <h2>6. Limitazioni di Responsabilità</h2>
+    
+    <div class="highlight-orange">
+        <strong>Importante:</strong> Ordini-Lampo è uno strumento di trasmissione ordini. Non siamo responsabili della preparazione, qualità o consegna del cibo.
     </div>
 
-    <h2>9. Sospensione e Risoluzione</h2>
-
-    <h3>9.1 Sospensione del Servizio</h3>
-    <p>Il Titolare puÃ² sospendere il Servizio in caso di:</p>
+    <p>Il Fornitore non è responsabile per:</p>
     <ul>
-        <li>Mancato pagamento per oltre 48 ore</li>
-        <li>Violazione dei presenti Termini</li>
-        <li>Utilizzo fraudolento del Servizio</li>
-        <li>Richiesta delle autoritÃ  competenti</li>
+        <li>Qualità, sicurezza o conformità dei prodotti venduti dal Ristoratore</li>
+        <li>Ritardi o mancate consegne da parte del Ristoratore</li>
+        <li>Controversie tra il Ristoratore e l'Utente Finale</li>
+        <li>Danni indiretti o perdita di profitto</li>
+        <li>Malfunzionamenti dovuti a cause di forza maggiore</li>
+        <li>Interruzioni della connettività internet del Ristoratore</li>
     </ul>
 
-    <h3>9.2 Recesso del Ristoratore</h3>
-    <p>Il Ristoratore puÃ² recedere in qualsiasi momento:</p>
+    <h2>7. Proprietà Intellettuale</h2>
+    <p>Tutti i diritti di proprietà intellettuale relativi alla piattaforma Ordini-Lampo (codice, design, marchio) appartengono al Fornitore.</p>
+    <p>Il Ristoratore mantiene tutti i diritti sul proprio marchio, logo e contenuti del menu.</p>
+
+    <h2>8. Durata e Recesso</h2>
+    
+    <h3>8.1 Durata</h3>
+    <p>Il contratto ha durata indeterminata e si rinnova automaticamente.</p>
+
+    <h3>8.2 Recesso del Ristoratore</h3>
+    <p>Il Ristoratore può recedere in qualsiasi momento:</p>
     <ul>
-        <li>Saldando i crediti utilizzati</li>
-        <li>Senza penali nÃ© costi aggiuntivi</li>
-        <li>Con effetto immediato dopo il saldo</li>
+        <li>Comunicando la volontà di recesso via WhatsApp o email</li>
+        <li>Saldando eventuali ordini pendenti</li>
+        <li>Il servizio viene disattivato entro 24 ore dalla richiesta</li>
+    </ul>
+    <p><strong>Non sono previste penali di recesso.</strong></p>
+
+    <h3>8.3 Recesso del Fornitore</h3>
+    <p>Il Fornitore può recedere con preavviso di 30 giorni, salvo in caso di:</p>
+    <ul>
+        <li>Mancato pagamento prolungato</li>
+        <li>Violazione grave dei presenti termini</li>
+        <li>Uso fraudolento del servizio</li>
+        <li>Attività illegali del Ristoratore</li>
     </ul>
 
-    <h3>9.3 Recesso del Titolare</h3>
-    <p>Il Titolare puÃ² recedere con preavviso di 30 giorni, garantendo al Ristoratore l'utilizzo dei crediti giÃ  acquistati.</p>
+    <h2>9. Modifiche ai Termini</h2>
+    <p>Il Fornitore può modificare i presenti termini con preavviso di 15 giorni. Le modifiche saranno comunicate via email o WhatsApp. L'uso continuato del servizio dopo la modifica costituisce accettazione.</p>
 
-    <h2>10. ProprietÃ  Intellettuale</h2>
-    <ul>
-        <li>Il marchio "Ordini-Lampo" e i relativi loghi sono di proprietÃ  del Titolare</li>
-        <li>Il Ristoratore mantiene la proprietÃ  di loghi e contenuti propri</li>
-        <li>Ãˆ vietato copiare, modificare o redistribuire il software del Servizio</li>
-    </ul>
+    <h2>10. Legge Applicabile e Foro Competente</h2>
+    <p>Il presente contratto è regolato dalla legge italiana. Per qualsiasi controversia è competente il Foro di Imperia.</p>
 
-    <h2>11. Riservatezza</h2>
-    <p>Entrambe le parti si impegnano a mantenere riservate le informazioni commerciali e tecniche apprese durante il rapporto contrattuale.</p>
+    <h2>11. Contatti</h2>
+    <p>Per domande sui Termini di Servizio:</p>
+    <p><strong>Paolo Pizzo</strong><br>
+    Email: <a href="mailto:ordini-lampo@proton.me">ordini-lampo@proton.me</a><br>
+    WhatsApp: <a href="https://wa.me/393896382394">+39 389 638 2394</a></p>
 
-    <h2>12. Modifiche ai Termini</h2>
-    <p>Il Titolare puÃ² modificare i presenti Termini con preavviso di 30 giorni. Le modifiche saranno comunicate via email. L'uso continuato del Servizio dopo la modifica costituisce accettazione dei nuovi Termini.</p>
+    <h2>12. Accettazione</h2>
+    <p>L'attivazione del servizio Ordini-Lampo implica l'accettazione integrale dei presenti Termini di Servizio, della <a href="/privacy-policy.html">Privacy Policy</a> e della <a href="/cookie-policy.html">Cookie Policy</a>.</p>
 
-    <h2>13. Legge Applicabile e Foro Competente</h2>
-    <ul>
-        <li><strong>Legge applicabile:</strong> Legge italiana</li>
-        <li><strong>Foro competente:</strong> Tribunale di Imperia</li>
-        <li>Per le controversie con consumatori si applicano le norme del Codice del Consumo</li>
-    </ul>
-
-    <h2>14. Contatti</h2>
-    <div class="contact-box">
-        <p><strong>Pizzo Paolo</strong><br>
-        Corso Orazio Raimondo 159<br>
-        18038 Imperia (IM) - Italia<br>
-        P.IVA: 01738420080</p>
-        <p style="margin-top: 15px;">
-            ðŸ“§ Email: <a href="/cdn-cgi/l/email-protection#98f7eafcf1f6f1b5f4f9f5e8f7d8e8eaf7ecf7f6b6f5fd"><span class="__cf_email__" data-cfemail="acc3dec8c5c2c581c0cdc1dcc3ecdcdec3d8c3c282c1c9">[email&#160;protected]</span></a><br>
-            ðŸ’¬ WhatsApp: +39 389 638 2394
-        </p>
+    <div class="footer">
+        <p><a href="/">← Torna alla Home</a></p>
+        <p style="margin-top: 15px;">© 2025 Ordini-Lampo. Tutti i diritti riservati.</p>
     </div>
+</div>
 
-    <h2>15. Disposizioni Finali</h2>
-    <ul>
-        <li>L'eventuale nullitÃ  di una clausola non invalida le restanti</li>
-        <li>Il mancato esercizio di un diritto non costituisce rinuncia</li>
-        <li>I presenti Termini sostituiscono ogni precedente accordo</li>
-    </ul>
-
-    <div class="highlight-box">
-        <p><strong>âœ… Accettazione:</strong> L'utilizzo del Servizio implica l'accettazione i
+</body>
+</html>

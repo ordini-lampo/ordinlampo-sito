@@ -837,26 +837,27 @@
         <h3 style="font-size:1.5rem; margin-bottom:25px; color:var(--text-white);">📅 Il Ciclo: Venerdì → Giovedì</h3>
         <div class="cycle-visual">
             <div class="cycle-day billing"><div class="day-name">VEN</div><div class="day-num">💳</div></div>
-            <div class="cycle-day active"><div class="day-name">SAB</div><div class="day-num">📱</div></div>
-            <div class="cycle-day active"><div class="day-name">DOM</div><div class="day-num">📱</div></div>
-            <div class="cycle-day active"><div class="day-name">LUN</div><div class="day-num">📱</div></div>
-            <div class="cycle-day active"><div class="day-name">MAR</div><div class="day-num">📱</div></div>
-            <div class="cycle-day active"><div class="day-name">MER</div><div class="day-num">📱</div></div>
+            <div class="cycle-day active"><div class="day-name">SAB</div><div class="day-num">💵+📱</div></div>
+            <div class="cycle-day active"><div class="day-name">DOM</div><div class="day-num">💵+📱</div></div>
+            <div class="cycle-day active"><div class="day-name">LUN</div><div class="day-num">💵+📱</div></div>
+            <div class="cycle-day active"><div class="day-name">MAR</div><div class="day-num">💵+📱</div></div>
+            <div class="cycle-day active"><div class="day-name">MER</div><div class="day-num">💵+📱</div></div>
             <div class="cycle-day"><div class="day-name">GIO</div><div class="day-num">📊</div></div>
         </div>
         <div class="cycle-legend" style="color: var(--text-muted); font-size: 0.95rem;">
-            <p style="margin-bottom:5px;">📱 <strong>Sab-Mer</strong> = Lavori e incassi dai clienti</p>
+            <p style="margin-bottom:5px;">💵+📱 <strong>Sab-Mer</strong> = Ricevi ordini e incassi dai clienti</p>
             <p style="margin-bottom:5px;">📊 <strong>Giovedì</strong> = Ricevi riepilogo ordini su WhatsApp</p>
-            <p>💳 <strong>Venerdì</strong> = Addebito automatico (€1,20 × ordini)</p>
+            <p>💳 <strong>Venerdì</strong> = Ti chiediamo di saldare solo i crediti usati</p>
         </div>
     </div>
     
     <div class="reflection-box reveal">
-        <h3>🤝 Ti Finanziamo Noi. Tu Incassi Subito.</h3>
-        <p>1. Il cliente ordina → <span style="color:var(--accent-green-light); font-weight:600;">paga subito a te</span></p>
-        <p>2. Tu incassi → soldi sul tuo conto <span style="color:var(--accent-green-light); font-weight:600;">immediati</span></p>
-        <p>3. Noi aspettiamo → ti chiediamo il compenso solo <span style="color:var(--accent-green-light); font-weight:600;">venerdì</span></p>
-        <p style="margin-top: 15px; font-size:1.1rem; color:#fff;">In pratica: <strong>ti stiamo finanziando.</strong></p>
+        <h3>🏦 Ti Diamo Credito. Tu Incassi Subito.</h3>
+        <p>1. <strong>Parti con 100 crediti</strong> → Ti mettiamo a disposizione l'App per ricevere ordini. <span style="color:var(--accent-green-light); font-weight:600;">I primi 100 sono a credito, senza pagare nulla in anticipo.</span></p>
+        <p>2. <strong>Tu incassi subito</strong> → Il cliente ordina e paga direttamente a te (contanti, POS, Satispay). <span style="color:var(--accent-green-light); font-weight:600;">Soldi tuoi, immediati.</span></p>
+        <p>3. <strong>Noi ti aspettiamo</strong> → Ti chiediamo di saldare solo i crediti usati, <span style="color:var(--accent-green-light); font-weight:600;">al venerdì</span> (o al termine dei 100 crediti se li usi prima).</p>
+        <p>4. <strong>Poi scegli tu</strong> → Dopo il saldo, rinnovi i 100 crediti FREEDOM oppure passi a un pacchetto più conveniente (500 o KING).</p>
+        <p style="margin-top: 15px; font-size:1.1rem; color:#fff;">In pratica: <strong>ti diamo credito per partire. Zero anticipo.</strong></p>
     </div>
 </section>
 
@@ -897,19 +898,3 @@
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
-    });
-</script>
-
-</body>
-</html>

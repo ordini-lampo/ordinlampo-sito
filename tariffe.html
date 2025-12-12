@@ -3,663 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tariffe | Ordini-Lampo</title>
-    <meta name="description" content="Tariffe Ordini-Lampo: LAMPO FREEDOM, LAMPO 500, LAMPO KING. Prepagato, zero vincoli.">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://ordini-lampo.it/tariffe.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <title>Tariffe Ordini-Lampo | Piani Business & Retail</title>
     <style>
         :root {
-            --gradient-start: #1a1a2e;
-            --gradient-mid: #4a1942;
-            --gradient-end: #8b2f5f;
-            --accent-orange: #F59E0B;
-            --accent-orange-light: #FBBF24;
-            --accent-green: #22c55e;
-            --accent-green-light: #4ade80;
-            --accent-gold: #FFD700;
-            --text-white: #ffffff;
-            --text-muted: #d1d5db;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --card-border: rgba(255, 255, 255, 0.1);
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.8);
+            --accent-green: #4ade80;
+            --accent-orange: #FBBF24;
+            --accent-blue: #60a5fa;
+            --text-white: #f8fafc;
+            --text-muted: #94a3b8;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
             color: var(--text-white);
-            line-height: 1.8;
-            font-size: 18px;
+            line-height: 1.6;
             min-height: 100vh;
         }
-
-        .top-bar {
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px);
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.95rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .top-bar a {
-            color: var(--accent-green-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .top-bar a:hover { color: var(--text-white); }
-        .logo-small {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--accent-orange);
-        }
-
-        .hero-tariffe {
-            text-align: center;
-            padding: 60px 20px 40px;
-        }
-        .hero-tariffe h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-        .hero-tariffe .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
-
-        /* PROVA GRATUITA BOX */
-        .prova-box {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(0,0,0,0.3));
-            border: 2px solid var(--accent-green);
-            border-radius: 20px;
-            padding: 30px;
+        .header {
             text-align: center;
             margin-bottom: 50px;
         }
-        .prova-box h3 {
-            color: var(--accent-green-light);
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-        .prova-box p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-        .prova-box .highlight {
-            color: var(--text-white);
-            font-weight: 600;
-        }
-
-        /* PRICING CARDS */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin: 40px 0;
-            align-items: stretch;
-        }
-
-        .pricing-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 2px solid var(--card-border);
-            border-radius: 25px;
-            padding: 35px 25px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            min-height: 580px;
-        }
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-        .pricing-card:nth-child(1) { border-color: rgba(74, 222, 128, 0.4); }
-        .pricing-card:nth-child(1):hover { border-color: var(--accent-green-light); }
-        .pricing-card:nth-child(2) { border-color: rgba(74, 222, 128, 0.4); }
-        .pricing-card:nth-child(2):hover { border-color: var(--accent-green-light); }
-        .pricing-card:nth-child(3) { border-color: rgba(255, 215, 0, 0.4); }
-        .pricing-card:nth-child(3):hover { border-color: var(--accent-gold); }
-
-        .pricing-card.popular {
-            box-shadow: 0 0 40px rgba(34, 197, 94, 0.2);
-        }
-        .pricing-card.premium {
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
-        }
-
-        .card-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 5px 15px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-        .badge-explore {
-            background: var(--accent-green);
-            color: #1a1a2e;
-        }
-        .badge-popular {
-            background: var(--accent-green);
-            color: #1a1a2e;
-        }
-        .badge-max {
-            background: linear-gradient(135deg, var(--accent-gold), #FFA500);
-            color: #1a1a2e;
-        }
-
-        /* PLAN HEADER */
-        .plan-header {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .plan-icon {
+        .header h1 {
             font-size: 2.5rem;
             margin-bottom: 15px;
-            display: block;
         }
-        
-        /* BOX NOME FULL-WIDTH */
-        .plan-name-box {
-            background: rgba(0,0,0,0.3);
-            border-radius: 12px;
-            padding: 15px 10px;
-            margin: 0 -25px;
-            width: calc(100% + 50px);
-        }
-        .pricing-card:nth-child(1) .plan-name-box { border: 1px solid rgba(74, 222, 128, 0.3); }
-        .pricing-card:nth-child(2) .plan-name-box { border: 1px solid rgba(74, 222, 128, 0.3); }
-        .pricing-card:nth-child(3) .plan-name-box { border: 1px solid rgba(255, 215, 0, 0.3); }
-        
-        .plan-name-top {
-            font-size: 2.8rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            line-height: 1;
-            display: block;
-            text-align: center;
-        }
-        .plan-name-bottom {
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 3px;
+        .header p {
             color: var(--text-muted);
-            text-transform: uppercase;
-            display: block;
-            margin-top: 8px;
-            text-align: center;
-        }
-        
-        .pricing-card:nth-child(1) .plan-name-top { color: var(--accent-green-light); }
-        .pricing-card:nth-child(2) .plan-name-top { color: var(--accent-green-light); }
-        .pricing-card:nth-child(3) .plan-name-top { color: var(--accent-gold); }
-
-        /* PRICING */
-        .plan-price {
-            margin: 25px 0;
-        }
-        .price-package {
             font-size: 1.1rem;
-            color: var(--text-muted);
+        }
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .plan-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .plan-card.featured {
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.2);
+        }
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--accent-green);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .plan-name {
+            font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 5px;
         }
-        .price-main {
-            font-size: 2.8rem;
-            font-weight: 900;
-        }
-        .pricing-card:nth-child(1) .price-main { color: var(--accent-green-light); }
-        .pricing-card:nth-child(2) .price-main { color: var(--accent-green-light); }
-        .pricing-card:nth-child(3) .price-main { color: var(--accent-gold); }
-        
-        .price-main .currency {
-            font-size: 1.4rem;
-            vertical-align: top;
-        }
-        .price-unit {
-            font-size: 1.1rem;
+        .plan-target {
             color: var(--text-muted);
-            margin-top: 5px;
-        }
-
-        /* IDEAL FOR BOX */
-        .ideal-for {
-            background: rgba(0,0,0,0.3);
-            border-radius: 12px;
-            padding: 15px;
-            margin: 15px 0;
-            text-align: left;
-        }
-        .ideal-for-title {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--accent-orange-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .ideal-for-text {
             font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.5;
+            margin-bottom: 20px;
         }
-
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            margin-bottom: 5px;
+        }
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .plan-fee {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
         .plan-features {
-            text-align: left;
-            margin: 15px 0;
-            padding: 0;
             list-style: none;
-            flex-grow: 1;
+            margin-bottom: 25px;
         }
         .plan-features li {
-            padding: 6px 0;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
         }
-        .plan-features li .check {
-            color: var(--accent-green-light);
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        .plan-features li::before {
+            content: "✓";
+            color: var(--accent-green);
+            margin-right: 10px;
             font-weight: bold;
-        }
-
-        /* CTA */
-        .plan-cta-wrapper {
-            margin-top: auto;
-            padding-top: 20px;
         }
         .plan-cta {
             display: block;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 15px 25px;
-            border-radius: 50px;
+            text-align: center;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, var(--accent-green), #22c55e);
+            color: #000;
             text-decoration: none;
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: transform 0.2s;
         }
         .plan-cta:hover {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        .plan-cta.green {
-            background: linear-gradient(135deg, var(--accent-green), #16a34a);
-            color: #fff;
+        .plan-cta.secondary {
+            background: transparent;
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
         }
-        .plan-cta.green:hover {
-            box-shadow: 0 5px 20px rgba(34, 197, 94, 0.4);
-        }
-        .plan-cta.gold {
-            background: linear-gradient(135deg, var(--accent-gold), #FFA500);
-            color: #1a1a2e;
-        }
-        .plan-cta.gold:hover {
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
-        }
-
-        /* COMPARISON TABLE */
-        .comparison-section {
-            margin: 60px 0;
-        }
-        .comparison-title {
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: var(--accent-green-light);
-        }
-
         .comparison-table {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            overflow-x: auto;
+        }
+        .comparison-table h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        table {
             width: 100%;
             border-collapse: collapse;
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            overflow: hidden;
         }
-        .comparison-table th,
-        .comparison-table td {
-            padding: 16px 12px;
+        th, td {
+            padding: 12px 15px;
             text-align: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .comparison-table th {
-            background: rgba(0,0,0,0.3);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        .comparison-table th:first-child,
-        .comparison-table td:first-child {
-            text-align: left;
-            padding-left: 20px;
-        }
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        .comparison-table .highlight-green {
-            color: var(--accent-green-light);
-            font-weight: 700;
-        }
-        .comparison-table .highlight-gold {
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
-        .comparison-table .saving {
-            color: var(--accent-orange-light);
+        th {
+            color: var(--text-muted);
+            font-weight: 600;
             font-size: 0.85rem;
+            text-transform: uppercase;
         }
-
-        /* CORPORATE BOX */
-        .corporate-box {
-            margin: 60px 0;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0,0,0,0.3));
-            border: 2px solid var(--accent-gold);
-            border-radius: 25px;
-            padding: 40px;
+        td {
+            font-size: 0.95rem;
+        }
+        .best {
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+        .note-box {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .note-box h4 {
+            color: var(--accent-orange);
+            margin-bottom: 10px;
+        }
+        .footer-cta {
             text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(251, 191, 36, 0.1));
+            border-radius: 16px;
         }
-        .corporate-box h3 {
-            color: var(--accent-gold);
+        .footer-cta h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
-        .corporate-box p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
-        .corporate-cta {
+        .footer-cta a {
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent-gold), #FFA500);
-            color: #1a1a2e;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .corporate-cta:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
-        }
-
-        /* BULLDOZER BOX */
-        .bulldozer-box {
-            margin: 50px 0;
-            background: rgba(0,0,0,0.3);
-            border-left: 5px solid var(--accent-orange);
-            border-radius: 0 20px 20px 0;
-            padding: 30px;
-        }
-        .bulldozer-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--accent-orange-light);
-        }
-        .bulldozer-box p {
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-        .bulldozer-box .strong {
-            color: var(--text-white);
-            font-weight: 600;
-        }
-
-        /* FOOTER */
-        .footer-tariffe {
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-        .footer-tariffe .back-link {
-            display: inline-block;
-            color: var(--accent-green-light);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 12px 30px;
-            border: 2px solid var(--accent-green);
-            border-radius: 30px;
-            transition: all 0.3s;
-        }
-        .footer-tariffe .back-link:hover {
+            padding: 15px 30px;
             background: var(--accent-green);
-            color: #1a1a2e;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .pricing-card {
-                min-height: auto;
-            }
-            .hero-tariffe h1 { font-size: 1.8rem; }
-            .comparison-table { font-size: 0.8rem; }
-            .comparison-table th,
-            .comparison-table td { padding: 10px 6px; }
-            .plan-name-top { font-size: 2.2rem; }
-            .plan-name-box { margin: 0 -15px; width: calc(100% + 30px); }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .plan-price { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Tariffe Ordini-Lampo</h1>
+            <p>Scegli il piano più adatto al tuo volume di ordini</p>
+        </div>
 
-<div class="top-bar">
-    <a href="/" class="logo-small">⚡ Ordini-Lampo</a>
-    <a href="https://wa.me/393896382394?text=Ciao!%20Ho%20visto%20le%20tariffe.">💬 Scrivimi</a>
-</div>
-
-<section class="hero-tariffe">
-    <h1>💰 Tariffe. Numeri sul Tavolo.</h1>
-    <p class="subtitle">Prepagato. Zero vincoli. Zero canoni. Compri, usi, ricarichi quando vuoi.</p>
-</section>
-
-<div class="container">
-
-    <!-- PROVA BOX -->
-    <div class="prova-box">
-        <h3>🎁 Prova Prima di Comprare</h3>
-        <p><span class="highlight">100 ordini di prova</span> — pagamento differito al venerdì. Zero rischi, zero impegno.</p>
-    </div>
-
-    <!-- PRICING CARDS -->
-    <div class="pricing-grid">
-        
-        <!-- LAMPO FREEDOM -->
-        <div class="pricing-card">
-            <div class="card-badge badge-explore">Per Esplorare</div>
-            <div class="plan-header">
-                <span class="plan-icon">⚡</span>
-                <div class="plan-name-box">
-                    <span class="plan-name-top">FREEDOM</span>
-                    <span class="plan-name-bottom">Lampo</span>
-                </div>
+        <div class="plans-grid">
+            <!-- FREEDOM -->
+            <div class="plan-card">
+                <div class="plan-name">🆓 METODO FREEDOM</div>
+                <div class="plan-target">Per chi inizia o ha volumi variabili</div>
+                <div class="plan-price">€1,20 <span>/ordine</span></div>
+                <div class="plan-fee">Nessun canone mensile</div>
+                <ul class="plan-features">
+                    <li>Paghi solo il venerdì</li>
+                    <li>Zero vincoli contrattuali</li>
+                    <li>10 ordini gratis per iniziare</li>
+                    <li>Esci quando vuoi</li>
+                    <li>Supporto WhatsApp</li>
+                </ul>
+                <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20attivare%20METODO%20FREEDOM" class="plan-cta">Attiva Gratis</a>
             </div>
-            
-            <div class="plan-price">
-                <div class="price-package">100 ordini</div>
-                <div class="price-main"><span class="currency">€</span>120</div>
-                <div class="price-unit">€1,20 per ordine</div>
+
+            <!-- LAMPO 500 -->
+            <div class="plan-card featured">
+                <div class="plan-badge">Più richiesto</div>
+                <div class="plan-name">⚡ LAMPO 500</div>
+                <div class="plan-target">Per chi ha un flusso costante</div>
+                <div class="plan-price">€0,98 <span>/ordine</span></div>
+                <div class="plan-fee">Prepagato • 500 crediti</div>
+                <ul class="plan-features">
+                    <li>Risparmio 18% vs Freedom</li>
+                    <li>15 ordini gratis inclusi</li>
+                    <li>Crediti senza scadenza</li>
+                    <li>Ricarica quando vuoi</li>
+                    <li>Supporto prioritario</li>
+                </ul>
+                <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20LAMPO%20500" class="plan-cta">Richiedi Info</a>
             </div>
-            
-            <div class="ideal-for">
-                <div class="ideal-for-title">🎯 Ideale per</div>
-                <div class="ideal-for-text">Chi vuole provare. Ristoranti che partono o fanno pochi ordini al mese.</div>
-            </div>
-            
-            <ul class="plan-features">
-                <li><span class="check">✓</span> Prepagato</li>
-                <li><span class="check">✓</span> Zero vincoli</li>
-                <li><span class="check">✓</span> Zero canoni</li>
-                <li><span class="check">✓</span> Crediti senza scadenza</li>
-            </ul>
-            
-            <div class="plan-cta-wrapper">
-                <a href="https://wa.me/393896382394?text=Ciao!%20Voglio%20LAMPO%20FREEDOM." class="plan-cta green">Acquista</a>
+
+            <!-- LAMPO MAX -->
+            <div class="plan-card">
+                <div class="plan-name">🚀 LAMPO MAX</div>
+                <div class="plan-target">Per alto volume o multi-sede</div>
+                <div class="plan-price">€0,78 <span>/ordine</span></div>
+                <div class="plan-fee">+ €99/mese per sede</div>
+                <ul class="plan-features">
+                    <li>Risparmio 35% vs Freedom</li>
+                    <li>30 ordini gratis per sede</li>
+                    <li>Prezzo bloccato 12 mesi</li>
+                    <li>Supporto dedicato (4h risposta)</li>
+                    <li>Ideale per catene 2-9 sedi</li>
+                </ul>
+                <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20su%20LAMPO%20MAX" class="plan-cta secondary">Richiedi Preventivo</a>
             </div>
         </div>
 
-        <!-- LAMPO 500 -->
-        <div class="pricing-card popular">
-            <div class="card-badge badge-popular">Più Scelto</div>
-            <div class="plan-header">
-                <span class="plan-icon">⚡</span>
-                <div class="plan-name-box">
-                    <span class="plan-name-top">500</span>
-                    <span class="plan-name-bottom">Lampo</span>
-                </div>
-            </div>
-            
-            <div class="plan-price">
-                <div class="price-package">500 ordini</div>
-                <div class="price-main"><span class="currency">€</span>490</div>
-                <div class="price-unit">€0,98 per ordine</div>
-            </div>
-            
-            <div class="ideal-for">
-                <div class="ideal-for-title">🎯 Ideale per</div>
-                <div class="ideal-for-text">Chi ha già capito che funziona. Volume medio, vuole risparmiare.</div>
-            </div>
-            
-            <ul class="plan-features">
-                <li><span class="check">✓</span> Prepagato</li>
-                <li><span class="check">✓</span> Risparmio 18%</li>
-                <li><span class="check">✓</span> Zero vincoli</li>
-                <li><span class="check">✓</span> Crediti senza scadenza</li>
-            </ul>
-            
-            <div class="plan-cta-wrapper">
-                <a href="https://wa.me/393896382394?text=Ciao!%20Voglio%20LAMPO%20500." class="plan-cta green">Acquista</a>
-            </div>
+        <!-- TABELLA COMPARATIVA -->
+        <div class="comparison-table">
+            <h3>📊 Quale piano conviene? (costo mensile stimato)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ordini/mese</th>
+                        <th>Freedom</th>
+                        <th>Lampo 500</th>
+                        <th>Lampo Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>50</td>
+                        <td class="best">€60</td>
+                        <td>—</td>
+                        <td>€138</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td class="best">€120</td>
+                        <td>€98</td>
+                        <td>€177</td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>€180</td>
+                        <td class="best">€147</td>
+                        <td>€216</td>
+                    </tr>
+                    <tr>
+                        <td>300</td>
+                        <td>€360</td>
+                        <td class="best">€294</td>
+                        <td>€333</td>
+                    </tr>
+                    <tr>
+                        <td>450+</td>
+                        <td>€540</td>
+                        <td>€441</td>
+                        <td class="best">€450</td>
+                    </tr>
+                    <tr>
+                        <td>750</td>
+                        <td>€900</td>
+                        <td>€735</td>
+                        <td class="best">€684</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- LAMPO KING -->
-        <div class="pricing-card premium">
-            <div class="card-badge badge-max">Max Risparmio</div>
-            <div class="plan-header">
-                <span class="plan-icon">👑</span>
-                <div class="plan-name-box">
-                    <span class="plan-name-top">KING</span>
-                    <span class="plan-name-bottom">Lampo</span>
-                </div>
-            </div>
-            
-            <div class="plan-price">
-                <div class="price-package">1000 ordini</div>
-                <div class="price-main"><span class="currency">€</span>780</div>
-                <div class="price-unit">€0,78 per ordine</div>
-            </div>
-            
-            <div class="ideal-for">
-                <div class="ideal-for-title">🎯 Ideale per</div>
-                <div class="ideal-for-text">Chi lavora forte. Alto volume, vuole il massimo risparmio.</div>
-            </div>
-            
-            <ul class="plan-features">
-                <li><span class="check">✓</span> Prepagato</li>
-                <li><span class="check">✓</span> Risparmio 35%</li>
-                <li><span class="check">✓</span> Zero vincoli</li>
-                <li><span class="check">✓</span> Crediti senza scadenza</li>
-            </ul>
-            
-            <div class="plan-cta-wrapper">
-                <a href="https://wa.me/393896382394?text=Ciao!%20Voglio%20LAMPO%20KING." class="plan-cta gold">Acquista</a>
-            </div>
+        <!-- NOTA WIN-WIN -->
+        <div class="note-box">
+            <h4>💡 Non sei sicuro?</h4>
+            <p>Parti con <strong>METODO FREEDOM</strong> (€1,20, zero vincoli). Prova il servizio con 10 ordini gratis. Quando il volume cresce, fai upgrade a Lampo 500 o Max. <strong>Nessun rischio, nessuna pressione.</strong></p>
         </div>
 
+        <!-- CORPORATE -->
+        <div class="note-box" style="background: rgba(96, 165, 250, 0.1); border-color: rgba(96, 165, 250, 0.3);">
+            <h4 style="color: var(--accent-blue);">🏢 Hai 10+ sedi?</h4>
+            <p>Per grandi catene offriamo <strong>condizioni personalizzate</strong>. Contattaci per un preventivo su misura.</p>
+            <a href="https://wa.me/393896382394?text=Ciao!%20Ho%20una%20catena%20con%20pi%C3%B9%20di%2010%20sedi.%20Vorrei%20un%20preventivo." style="color: var(--accent-blue); text-decoration: underline;">Contattaci →</a>
+        </div>
+
+        <!-- CTA FINALE -->
+        <div class="footer-cta">
+            <h3>Pronto a risparmiare sul 30%?</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Scrivici su WhatsApp, rispondiamo in giornata.</p>
+            <a href="https://wa.me/393896382394?text=Ciao!%20Vorrei%20info%20sulle%20tariffe%20Ordini-Lampo">💬 Scrivici su WhatsApp</a>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem;">
+            <a href="/" style="color: var(--accent-green);">← Torna alla homepage</a>
+        </p>
     </div>
-
-    <!-- BULLDOZER BOX -->
-    <div class="bulldozer-box">
-        <h3>🚜 In Sintesi</h3>
-        <p><span class="strong">LAMPO FREEDOM:</span> 100 ordini a €1,20. Per chi inizia.</p>
-        <p><span class="strong">LAMPO 500:</span> 500 ordini a €0,98. Risparmi 18%.</p>
-        <p><span class="strong">LAMPO KING:</span> 1000 ordini a €0,78. Risparmi 35%.</p>
-        <p style="margin-top: 15px; color: var(--accent-green-light); font-weight: 600;">Tutti prepagati. Tutti senza scadenza. Ricarichi quando finisci.</p>
-    </div>
-
-    <!-- COMPARISON TABLE -->
-    <div class="comparison-section">
-        <h2 class="comparison-title">📊 Confronto Risparmio</h2>
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Pacchetto</th>
-                    <th>Ordini</th>
-                    <th>Prezzo</th>
-                    <th>€/ordine</th>
-                    <th>Risparmio vs Freedom</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>⚡ FREEDOM</strong></td>
-                    <td>100</td>
-                    <td class="highlight-green">€120</td>
-                    <td>€1,20</td>
-                    <td class="saving">—</td>
-                </tr>
-                <tr>
-                    <td><strong>⚡ 500</strong></td>
-                    <td>500</td>
-                    <td class="highlight-green">€490</td>
-                    <td>€0,98</td>
-                    <td class="saving">€0,22/ordine (18%)</td>
-                </tr>
-                <tr>
-                    <td><strong>👑 KING</strong></td>
-                    <td>1000</td>
-                    <td class="highlight-gold">€780</td>
-                    <td>€0,78</td>
-                    <td class="saving">€0,42/ordine (35%)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- CORPORATE BOX -->
-    <div class="corporate-box">
-        <h3>🏢 Hai 3+ sedi con fattura unica?</h3>
-        <p>Parliamone. Condizioni dedicate per catene e franchising.</p>
-        <a href="https://wa.me/393896382394?text=Ciao%20Paolo.%20Ho%20una%20catena%20con%20[X]%20sedi%20e%20fattura%20unica.%20Parliamo%20di%20condizioni%20corporate." class="corporate-cta">🤝 Parliamone</a>
-    </div>
-
-</div>
-
-<footer class="footer-tariffe">
-    <a href="/" class="back-link">← Torna alla Home</a>
-    <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">© 2025 Ordini-Lampo. Tutti i diritti riservati.</p>
-</footer>
-
 </body>
 </html>

@@ -128,40 +128,56 @@
             0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
             50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.7; }
         }
-        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
-        .logo-text {
-            font-size: 5rem;
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 20px;
+        .hero-content { 
+            position: relative; 
+            z-index: 1; 
+            max-width: 900px; 
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero-text-block {
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+            text-align: left;
+        }
+        .logo-line {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 15px;
-            white-space: nowrap;
-            text-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            position: relative;
+            margin-bottom: 20px;
         }
         .logo-bolt {
+            position: absolute;
+            right: 100%;
+            margin-right: 15px;
             color: var(--accent-orange);
             filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.6));
             animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            font-size: 5rem;
         }
         .logo-name {
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            text-shadow: 0 20px 50px rgba(0,0,0,0.6);
             background: linear-gradient(90deg, #fff 0%, #e2e8f0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .hero h1 { 
             font-size: 2.4rem; 
             font-weight: 300; 
             margin-bottom: 50px; 
             line-height: 1.3; 
-            color: #e2e8f0; 
+            color: #e2e8f0;
+            text-align: left;
         }
         .hero h1 strong { 
             font-weight: 700; 
@@ -202,8 +218,37 @@
             opacity: 0.7;
         }
         .price-section { padding: 25px 20px; text-align: center; }
-        .price-hero { font-size: 2.2rem; font-weight: 700; color: var(--text-white); margin-bottom: 20px; }
-        .price-hero-sub { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0; line-height: 2.2; }
+        .price-hero { font-size: 2.2rem; font-weight: 700; color: var(--text-white); margin-bottom: 25px; }
+        .price-list-container {
+            display: inline-block;
+            text-align: left;
+        }
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .price-list li {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .price-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+        .price-list li.highlight-green {
+            color: var(--accent-green-light);
+            font-weight: 600;
+        }
+        .price-list li.highlight-green::before {
+            color: var(--accent-green-light);
+        }
         .hero-zero-strip {
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -288,11 +333,20 @@
         }
         .glass-box:hover::before { opacity: 1; }
         .video-section {
-            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 100%);
-            padding: 100px 20px;
+            padding: 90px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .video-section-inner { 
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             text-align: center;
         }
-        .video-section-inner { max-width: 1100px; margin: 0 auto; }
         .video-badge {
             display: inline-block;
             background: rgba(245, 158, 11, 0.15);
@@ -379,17 +433,21 @@
         .video-cta-secondary:hover { border-color: var(--accent-green-light); color: var(--accent-green-light); background: rgba(34,197,94,0.05); }
         .section { padding: 90px 20px; max-width: 1100px; margin: 0 auto; }
         
-        /* Box principale uniforme per tutte le sezioni */
+        /* Box principale uniforme per tutte le sezioni - EFFETTO 3D SENZA STROKE */
         .main-box {
-            background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 25px;
             padding: 50px 40px;
             width: 100%;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
         .main-box.accent-orange {
-            background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(139,47,95,0.3));
-            border: 2px solid var(--accent-orange);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(74, 25, 66, 0.4));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
         }
         .section-dark {
             background: rgba(0,0,0,0.2);
@@ -402,14 +460,15 @@
         .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; color: var(--accent-green-light); text-align: center; }
         .section-intro { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 50px; max-width: 750px; margin-left: auto; margin-right: auto; text-align: center; }
         .thirty-seconds {
-            background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(0,0,0,0.4));
-            border: 1px solid var(--accent-green);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 30px;
             padding: 50px;
             text-align: center;
             margin: 40px 0;
-            box-shadow: 0 0 40px rgba(34,197,94,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
         .thirty-steps { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
         .thirty-step {
@@ -425,14 +484,15 @@
         .thirty-step .number { font-size: 3rem; font-weight: 900; color: var(--accent-green-light); margin-bottom: 15px; text-shadow: 0 0 15px rgba(34,197,94,0.4); }
         .thirty-step .text { font-size: 1.05rem; }
         .demo-box {
-            background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(0,0,0,0.4));
-            border: 1px solid var(--accent-orange);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 30px;
             padding: 50px;
             text-align: center;
             margin: 60px 0;
-            box-shadow: 0 0 40px rgba(245,158,11,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
         .demo-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent-orange-light); }
         .demo-qr {
@@ -452,14 +512,15 @@
             font-weight: 600;
             text-decoration: none;
             padding: 12px 30px;
-            border: 2px solid var(--accent-orange);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 30px;
             transition: all 0.3s;
             text-transform: uppercase;
             font-size: 0.9rem;
             letter-spacing: 1px;
+            background: rgba(255,255,255,0.05);
         }
-        .demo-link:hover { background: var(--accent-orange); color: #1a1a2e; box-shadow: 0 0 20px rgba(245,158,11,0.4); }
+        .demo-link:hover { background: rgba(245,158,11,0.15); color: var(--accent-orange-light); box-shadow: 0 0 20px rgba(245,158,11,0.2); }
         .guardiamoci-section {
             background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(0,0,0,0.3));
             border-top: 1px solid rgba(245,158,11,0.2);
@@ -685,7 +746,7 @@
             border-radius: 24px;
             overflow: hidden;
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 350px 1fr;
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             backdrop-filter: blur(12px);
         }
@@ -698,12 +759,23 @@
             flex-direction: column;
             align-items: center;
         }
-        .avatar-container { position: relative; margin-bottom: 20px; }
-        .avatar-letter {
+        .avatar-container { 
+            position: relative; 
             width: 130px;
             height: 130px;
+            border: 4px solid #FBBF24;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FBBF24;
+            overflow: hidden;
+        }
+        .avatar-letter {
+            width: 100%;
+            height: 100%;
             background: linear-gradient(135deg, #334155, #0f172a);
-            border: 3px solid var(--accent-orange);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -711,39 +783,34 @@
             font-size: 3.5rem;
             font-weight: 800;
             color: var(--accent-orange);
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
         }
         .avatar-image {
-            width: 130px;
-            height: 130px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center top;
-            border: 3px solid var(--accent-orange);
-            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
             filter: grayscale(100%);
-            transition: transform 0.3s ease;
+            border: none;
+            display: block;
         }
         .avatar-image:hover { transform: scale(1.05); }
         .avatar-badge {
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-orange);
+            display: inline-block;
+            margin-top: 12px;
+            margin-bottom: 10px;
+            background-color: #FBBF24;
             color: #000;
             font-size: 0.75rem;
             font-weight: 800;
-            padding: 4px 12px;
+            padding: 4px 14px;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            white-space: nowrap;
         }
-        .founder-name { margin: 15px 0 5px 0; color: #fff; font-size: 1.4rem; }
-        .founder-role { margin: 0; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+        .founder-name { margin: 15px 0 5px 0; color: #fff; font-size: 1.4rem; text-align: center; }
+        .founder-role { margin: 0; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-align: center; }
         .bio-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.1); margin: 20px auto; }
-        .bio-quote { font-style: italic; color: #94a3b8; font-size: 0.9rem; line-height: 1.6; }
+        .bio-quote { font-style: italic; color: #94a3b8; font-size: 0.9rem; line-height: 1.6; text-align: left; width: 100%; }
         .founder-body {
             padding: 40px;
             display: flex;
@@ -766,6 +833,14 @@
         .insight-box.danger-theme {
             background: linear-gradient(180deg, rgba(239, 68, 68, 0.05), transparent);
             border-color: rgba(239, 68, 68, 0.2);
+        }
+        .insight-box.certainty-theme {
+            background: linear-gradient(180deg, rgba(239, 68, 68, 0.08), transparent);
+            border-color: rgba(239, 68, 68, 0.25);
+        }
+        .insight-box.certainty-theme .check-list li::before { 
+            content: "✗"; 
+            color: #f87171; 
         }
         .box-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 1rem; }
         .check-list { list-style: none; padding: 0; margin: 0; }
@@ -812,16 +887,18 @@
         .faq-item-rapid .question { font-style: italic; color: var(--text-muted); font-size: 1rem; }
         .faq-item-rapid .answer { font-weight: 600; color: var(--accent-green-light); font-size: 1rem; }
         .cycle-box {
-            background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(0,0,0,0.2));
-            border: 2px solid var(--accent-green);
-            backdrop-filter: var(--glass-blur);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 30px;
             padding: 40px;
             margin: 40px 0;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
         .cycle-box:hover {
-            box-shadow: 0 0 40px var(--accent-green-glow);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
             transform: scale(1.01);
         }
             text-align: center;
@@ -885,7 +962,10 @@
         .footer a:hover { opacity: 1; }
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; gap: 10px; font-size: 0.85rem; padding: 15px; }
-            .logo-text { font-size: 3rem; flex-direction: column; gap: 5px; }
+            .hero-text-block { padding-left: 50px; }
+            .logo-name { font-size: 2.5rem; }
+            .logo-bolt { font-size: 2.5rem; margin-right: 8px; }
+            .hero h1 { font-size: 1.4rem; }
             .hero h1 { font-size: 1.8rem; }
             .video-title { font-size: 1.8rem; }
             .thirty-steps { flex-direction: column; }
@@ -973,19 +1053,26 @@
 
 <section class="hero">
     <div class="hero-content reveal">
-        <div class="logo-text"><span class="logo-bolt">⚡</span><span class="logo-name">Ordini–Lampo</span></div>
-        <h1>Lavora <strong>libero</strong>, paga <strong>il venerdì</strong>.<br>Solo quello che usi.</h1>
+        <div class="hero-text-block">
+            <div class="logo-line">
+                <span class="logo-bolt">⚡</span>
+                <span class="logo-name">Ordini–Lampo</span>
+            </div>
+            <h1>Lavora <strong>libero</strong>, paga <strong>il venerdì</strong>.<br>Solo quello che usi.</h1>
+        </div>
         <div class="hero-main-strip">
             <div class="freedom-section">
                 <span class="freedom-title">Metodo Freedom</span>
             </div>
             <div class="strip-divider"></div>
             <div class="price-section">
-                <div class="price-hero">€1,20 per ordine. Tutto incluso.</div>
-                <div class="price-hero-sub">
-                    Nessun abbonamento.<br>
-                    Nessun vincolo.<br>
-                    Nessun anticipo.
+                <div class="price-hero"><span style="color: var(--accent-green-light);">€1,20</span> per ordine. Tutto incluso.</div>
+                <div class="price-list-container">
+                    <ul class="price-list">
+                        <li>Nessun abbonamento.</li>
+                        <li class="highlight-green">Nessun vincolo.</li>
+                        <li>Nessun anticipo.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1040,13 +1127,13 @@
         </div>
     </div>
     <div class="demo-box reveal">
-        <h3>📱 Prova Tu Stesso</h3>
-        <p style="color: var(--text-muted); margin-bottom: 25px;">Scansiona il QR o clicca il link per vedere come ordinano i tuoi clienti.</p>
+        <h3>📱 Prova Tu Stesso — Pannello Ristoratore</h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Scansiona il QR o clicca il link per vedere il <strong>pannello admin</strong> che userai per gestire ordini e menu.</p>
         <div class="demo-qr">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://ordinlampo.netlify.app/?r=demo-ordinilampo" alt="QR Code Demo">
+            <img src="https://quickchart.io/qr?text=https://ordinlampo-admin-v2.netlify.app&size=160" alt="QR Code Admin Demo" style="border-radius: 8px;">
         </div>
         <br>
-        <a href="https://ordinlampo.netlify.app/?r=demo-ordinilampo" target="_blank" class="demo-link">🔗 Apri la Demo</a>
+        <a href="https://ordinlampo-admin-v2.netlify.app" target="_blank" class="demo-link">🔗 Apri il Pannello Demo</a>
         <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted); opacity: 0.7;">Demo gratuita • Nessuna registrazione richiesta</p>
     </div>
 </section>
@@ -1230,20 +1317,46 @@
             
             <div class="founder-bio-panel">
                 <div class="avatar-container">
-                    <!-- SOSTITUIRE CON: <img src="paolo-founder.webp" alt="Paolo Pizzo" class="avatar-image"> -->
-                    <div class="avatar-letter">P</div>
-                    <div class="avatar-badge">Founder</div>
+                    <img src="paolo-founder.webp" alt="Paolo Pizzo - Founder Ordini-Lampo" class="avatar-image">
+                    <div class="avatar-letter" style="display:none;">P</div>
                 </div>
+                <div class="avatar-badge">Founder</div>
                 <h3 class="founder-name">Paolo Pizzo</h3>
-                <p class="founder-role">Ex-Rider & Creatore</p>
+                <p class="founder-role">Fondatore · Ex-Rider Delivery</p>
                 <div class="bio-divider"></div>
-                <p class="bio-quote">"4 anni in strada. So cosa non funziona."</p>
+                <p class="bio-quote">
+                    — 4 anni da staffetta tra locali e clienti.<br>
+                    — So cosa non funziona.<br>
+                    <span style="color: var(--accent-green-light);">— Guadagno con te, non su di te.</span>
+                </p>
             </div>
 
             <div class="founder-body">
                 <p class="story-text">
-                    Dietro Ordini-Lampo ci sono io. Ho passato <strong style="color: var(--accent-green-light);">4 anni in strada come rider</strong>. 
-                    So come funzionano le piattaforme da dentro. E so cosa <u>non</u> funziona per te.
+                    Dietro Ordini-Lampo ci sono io.<br>
+                    <strong style="color: var(--accent-green-light);">4 anni in strada come rider</strong> — ho visto i ristoranti da dentro.<br>
+                    Ho parlato con chi lavora 12 ore al giorno e cede il 30% su ogni ordine.<br>
+                    <span style="color: #f87171;">Anche su clienti che erano già suoi.</span>
+                </p>
+                
+                <p class="story-text" style="margin-top: 20px; font-weight: 700; color: var(--accent-orange-light); font-size: 1.15rem;">
+                    La comodità è una gabbia dorata.
+                </p>
+                
+                <p class="story-text" style="margin-top: 15px; color: var(--text-muted);">
+                    I tuoi clienti ordinano dalle app perché è facile.<br>
+                    Tu accetti il salasso perché gestire consegne e trovare clienti è fatica.<br>
+                    Intanto, ogni mese, <strong style="color: #f87171;">il 30% sparisce</strong>.
+                </p>
+                
+                <p class="story-text" style="margin-top: 20px; font-weight: 700; color: var(--accent-green-light); font-size: 1.1rem;">
+                    Ordini-Lampo rompe questa gabbia.
+                </p>
+                
+                <p class="story-text" style="margin-top: 15px; color: var(--text-muted);">
+                    Più soldi nelle tue tasche.<br>
+                    Un servizio personalizzato per i tuoi clienti.<br>
+                    <span style="color: var(--accent-green-light);">Ordini in 30 secondi, senza telefonate. In un lampo.</span>
                 </p>
 
                 <div class="insight-grid">
@@ -1258,25 +1371,24 @@
                         </ul>
                     </div>
 
-                    <div class="insight-box danger-theme">
+                    <div class="insight-box certainty-theme">
                         <div class="box-header">
-                            <span>📉</span> <span style="color: #f87171; font-weight: 700;">L'Inflazione</span>
+                            <span>⚠️</span> <span style="color: #f87171; font-weight: 700;">Le Certezze</span>
                         </div>
-                        <div class="tags-cloud">
-                            <span>Riso <b>+50%</b></span>
-                            <span>Olio <b>+42%</b></span>
-                            <span>Salmone <b>+35%</b></span>
-                        </div>
-                        <p style="font-size: 0.85rem; margin-top: 10px; color: #94a3b8;">
-                            Regalare margine oggi è un suicidio.
-                        </p>
+                        <ul class="check-list" style="color: #f87171;">
+                            <li>Inflazione alle stelle</li>
+                            <li>Esborso <strong>30-50%</strong> (tasse incluse)</li>
+                            <li>Commissioni su clienti <strong>già tuoi</strong></li>
+                            <li>Erosione margini costante</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="founder-conclusion">
-                    <p>Ordini-Lampo nasce da qui: <strong>Niente marketplace. Niente percentuali.</strong></p>
+                    <p>Ordini-Lampo cattura i clienti che oggi non raggiungi: <strong>gente stufa delle app, chi preferisce ordinare diretto, anziani che sanno usare solo WhatsApp.</strong></p>
+                    <p style="margin-top: 15px;">Niente percentuali. Solo <strong style="color: var(--accent-green-light);">€1,20 a ordine</strong>.</p>
                     <p style="color: var(--accent-green-light); font-weight: 700; font-size: 1.1rem; margin-top: 5px;">
-                        Tu guadagni di più, il cliente riceve meglio. Fine.
+                        Il resto è tuo.
                     </p>
                 </div>
             </div>
@@ -1421,6 +1533,11 @@
         <div class="faq-item-rapid"><div class="question">"E se non mi piace?"</div><div class="answer">→ Salda gli ordini ricevuti e vai. Nessun vincolo.</div></div>
         <div class="faq-item-rapid"><div class="question">"Quanto tempo ci vuole per partire?"</div><div class="answer">→ Un giorno. Configuriamo tutto noi.</div></div>
         <div class="faq-item-rapid"><div class="question">"Chi altro lo usa?"</div><div class="answer">→ Stiamo partendo in Liguria. Sei tra i primi!</div></div>
+        <div class="faq-item-rapid"><div class="question">"E se il cliente sbaglia l'ordine?"</div><div class="answer">→ Quasi impossibile. Il cliente segue un percorso guidato con checkpoint di conferma ad ogni step. Come all'IKEA: impossibile perdersi.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Devo installare qualcosa?"</div><div class="answer">→ No. Ricevi gli ordini su WhatsApp e li gestisci dal pannello web.</div></div>
+        <div class="faq-item-rapid"><div class="question">"E le consegne chi le fa?"</div><div class="answer">→ Tu, come sempre. Noi ti portiamo l'ordine, non il rider.</div></div>
+        <div class="faq-item-rapid"><div class="question">"Funziona anche per asporto?"</div><div class="answer">→ Sì. Il cliente sceglie: ritiro in locale o consegna a domicilio.</div></div>
+        <div class="faq-item-rapid"><div class="question">"E se ho problemi tecnici?"</div><div class="answer">→ Scrivici su WhatsApp. Ci attiviamo subito per risolvere.</div></div>
     </div>
 </section>
 
@@ -1434,11 +1551,248 @@
 </section>
 
 <footer class="footer">
-    <div>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
         <a href="/privacy-policy-ordinlampo.html">Privacy Policy</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="/cookie-policy-ordinlampo.html">Cookie Policy</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="/termini-servizio-ordinlampo.html">Termini di Servizio</a>
     </div>
     <p style="margin-top:10px;">© 2025 Ordini-Lampo. Tutti i diritti riservati.</p>
 </footer>
+
+<!-- COOKIE BANNER MINIMALISTA -->
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+            <p class="cookie-title">Rispettiamo la tua privacy</p>
+            <p class="cookie-desc">Questo sito usa solo cookie tecnici essenziali per funzionare. Nessun tracciamento, nessuna profilazione.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="cookie-btn cookie-btn-ghost" onclick="closeCookieBanner()">Continua senza accettare</button>
+            <button class="cookie-btn cookie-btn-primary" onclick="acceptCookies()">OK, ho capito</button>
+        </div>
+    </div>
+    <div class="cookie-details" id="cookieDetails" style="display: none;">
+        <div class="cookie-toggle-row">
+            <div>
+                <span class="toggle-label">Cookie tecnici (necessari)</span>
+                <span class="toggle-desc">Permettono il funzionamento del sito</span>
+            </div>
+            <div class="toggle-switch always-on">
+                <span>Sempre attivi</span>
+            </div>
+        </div>
+        <div class="cookie-toggle-row">
+            <div>
+                <span class="toggle-label">Cookie analytics</span>
+                <span class="toggle-desc">Non utilizziamo analytics</span>
+            </div>
+            <div class="toggle-switch">
+                <input type="checkbox" id="analyticsCookie" disabled>
+                <label for="analyticsCookie" class="toggle-disabled"></label>
+                <span class="toggle-off">OFF</span>
+            </div>
+        </div>
+        <div class="cookie-toggle-row">
+            <div>
+                <span class="toggle-label">Cookie marketing</span>
+                <span class="toggle-desc">Non utilizziamo marketing</span>
+            </div>
+            <div class="toggle-switch">
+                <input type="checkbox" id="marketingCookie" disabled>
+                <label for="marketingCookie" class="toggle-disabled"></label>
+                <span class="toggle-off">OFF</span>
+            </div>
+        </div>
+    </div>
+    <button class="cookie-toggle-details" onclick="toggleCookieDetails()">
+        <span id="detailsText">Mostra dettagli</span>
+        <span id="detailsArrow">▼</span>
+    </button>
+</div>
+
+<style>
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.98));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(251, 191, 36, 0.3);
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+        padding: 0;
+        z-index: 9999;
+        transform: translateY(100%);
+        animation: slideUp 0.5s ease forwards;
+        animation-delay: 1s;
+    }
+    @keyframes slideUp {
+        to { transform: translateY(0); }
+    }
+    .cookie-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .cookie-icon {
+        font-size: 2.5rem;
+        filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+        animation: bounce 2s ease infinite;
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .cookie-text {
+        flex: 1;
+    }
+    .cookie-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .cookie-desc {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        line-height: 1.4;
+    }
+    .cookie-actions {
+        display: flex;
+        gap: 12px;
+        flex-shrink: 0;
+    }
+    .cookie-btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+    .cookie-btn-ghost {
+        background: transparent;
+        color: #94a3b8;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .cookie-btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    .cookie-btn-primary {
+        background: linear-gradient(135deg, #FBBF24, #F59E0B);
+        color: #000;
+        box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    }
+    .cookie-btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+    }
+    .cookie-toggle-details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.2);
+        border: none;
+        color: #64748b;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .cookie-toggle-details:hover {
+        background: rgba(0, 0, 0, 0.3);
+        color: #94a3b8;
+    }
+    .cookie-details {
+        padding: 20px 30px;
+        background: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .cookie-toggle-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .cookie-toggle-row:last-child {
+        border-bottom: none;
+    }
+    .toggle-label {
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: block;
+    }
+    .toggle-desc {
+        color: #64748b;
+        font-size: 0.8rem;
+        display: block;
+        margin-top: 2px;
+    }
+    .toggle-switch {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .toggle-switch.always-on span {
+        color: #4ade80;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+    .toggle-off {
+        color: #64748b;
+        font-size: 0.85rem;
+    }
+    .toggle-disabled {
+        width: 40px;
+        height: 22px;
+        background: #1e293b;
+        border-radius: 11px;
+        display: inline-block;
+        position: relative;
+        opacity: 0.5;
+    }
+    .toggle-disabled::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: #475569;
+        border-radius: 50%;
+        top: 3px;
+        left: 3px;
+    }
+    @media (max-width: 768px) {
+        .cookie-content {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        .cookie-actions {
+            flex-direction: column;
+            width: 100%;
+        }
+        .cookie-btn {
+            width: 100%;
+        }
+        .cookie-icon {
+            font-size: 2rem;
+        }
+    }
+</style>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -1468,6 +1822,64 @@
             });
         }
     });
+</script>
+
+<script>
+    // Cookie Banner Logic
+    function checkCookieConsent() {
+        return localStorage.getItem('cookieConsent');
+    }
+    
+    function closeCookieBanner() {
+        const banner = document.getElementById('cookieBanner');
+        banner.style.animation = 'slideDown 0.3s ease forwards';
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 300);
+        localStorage.setItem('cookieConsent', 'dismissed');
+    }
+    
+    function acceptCookies() {
+        const banner = document.getElementById('cookieBanner');
+        banner.style.animation = 'slideDown 0.3s ease forwards';
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 300);
+        localStorage.setItem('cookieConsent', 'accepted');
+    }
+    
+    function toggleCookieDetails() {
+        const details = document.getElementById('cookieDetails');
+        const arrow = document.getElementById('detailsArrow');
+        const text = document.getElementById('detailsText');
+        
+        if (details.style.display === 'none') {
+            details.style.display = 'block';
+            arrow.textContent = '▲';
+            text.textContent = 'Nascondi dettagli';
+        } else {
+            details.style.display = 'none';
+            arrow.textContent = '▼';
+            text.textContent = 'Mostra dettagli';
+        }
+    }
+    
+    // Check on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        if (checkCookieConsent()) {
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+    });
+    
+    // Add slideDown animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideDown {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(100%); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
 </script>
 
 </body>
